@@ -28,27 +28,25 @@ CREATE TABLE Goods (
                                                    OR Good_type = 'for children'
                                                    OR Good_type = 'for pets'),
                          Availability INTEGER NOT NULL CHECK (Availability >= 0),
-                         Good_size INTEGER[3] CHECK ( Good_size[0] > 0
-                                                          AND
-                                                      Good_size[1] > 0
-                                                          AND
-                                                      Good_size[2] > 0),
+                         Good_size1 INTEGER CHECK (Good_size1 > 0),
+                         Good_size2 INTEGER CHECK (Good_size2 > 0),
+                         Good_size3 INTEGER CHECK (Good_size3 > 0),
                          Time_of_keeping DATE,
                          Good_description TEXT,
                          Measurement TEXT NOT NULL
 );
 DROP TABLE IF EXISTS Goods_in_supplies CASCADE;
 CREATE TABLE Goods_in_supplies (
+                                     Position_ID SERIAL PRIMARY KEY,
                                      Supply_ID INTEGER NOT NULL REFERENCES Supplies(Supply_ID) ON DELETE CASCADE,
                                      Good_ID INTEGER NOT NULL REFERENCES Goods(Good_ID) ON DELETE CASCADE,
-                                     Good_amount INTEGER NOT NULL CHECK (Good_amount > 0),
-                                     PRIMARY KEY (Supply_ID, Good_ID)
+                                     Good_amount INTEGER NOT NULL CHECK (Good_amount > 0)
 );
 DROP TABLE IF EXISTS Warehouse_condition CASCADE;
 CREATE TABLE Warehouse_condition (
                                        Place_ID SERIAL PRIMARY KEY,
-                                       Room_ID INTEGER CHECK (Room_ID >= 0),
-                                       Shelf_ID INTEGER CHECK (Shelf_ID >= 0),
+                                       Room_ID INTEGER CHECK (Room_ID >= 0) NOT NULL ,
+                                       Shelf_ID INTEGER CHECK (Shelf_ID >= 0) NOT NULL,
                                        Goods_type TEXT NOT NULL CHECK (Goods_type = 'products'
                                            OR Goods_type = 'clothes'
                                            OR Goods_type = 'devices'
@@ -78,10 +76,10 @@ CREATE TABLE Deliveries (
 );
 DROP TABLE IF EXISTS Goods_in_delivery CASCADE;
 CREATE TABLE Goods_in_delivery (
+                                     Position_ID SERIAL PRIMARY KEY,
                                      Delivery_ID INTEGER NOT NULL REFERENCES Deliveries(Delivery_ID) ON DELETE CASCADE,
                                      Good_ID INTEGER NOT NULL REFERENCES Goods(Good_ID) ON DELETE CASCADE,
-                                     Good_amount INTEGER NOT NULL,
-                                     PRIMARY KEY (Delivery_ID, Good_ID)
+                                     Good_amount INTEGER NOT NULL
 );
 
--- TODO: добавить триггеры
+-- TODO: добавить триггеры, доделать чекеры

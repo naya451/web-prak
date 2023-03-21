@@ -81,5 +81,3 @@ CREATE TABLE Goods_in_delivery (
                                      Good_ID INTEGER NOT NULL REFERENCES Goods(Good_ID) ON DELETE CASCADE,
                                      Good_amount INTEGER NOT NULL
 );
-
--- TODO: добавить триггеры, доделать чекеры

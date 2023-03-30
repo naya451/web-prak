@@ -16,6 +16,8 @@ public interface GoodsDAO extends CommonDAO<Goods, Long> {
     @Getter
     class Filter {
         private String name;
+        private String type;
+        private Long availability;
     }
 
     static Filter.FilterBuilder getFilterBuilder() {

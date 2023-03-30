@@ -41,7 +41,7 @@ public class Goods implements CommonEntity<Long> {
     private Long size3;
 
     @Column(name = "Time_of_keeping")
-    private Long time_of_keeping;
+    private java.sql.Date time_of_keeping;
 
     @Column(name = "Good_description")
     private String description;

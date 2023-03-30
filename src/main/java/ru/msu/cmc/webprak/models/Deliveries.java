@@ -21,11 +21,11 @@ public class Deliveries implements CommonEntity<Long> {
 
     @Column(nullable = false, name = "Delivery_date")
     @NonNull
-    private Long date;
+    private java.sql.Date date;
 
     @Column(nullable = false, name = "Delivery_time")
     @NonNull
-    private Long time;
+    private java.sql.Time time;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(nullable = false, name = "Buyer_ID")

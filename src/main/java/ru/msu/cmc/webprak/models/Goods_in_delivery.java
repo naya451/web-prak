@@ -32,5 +32,5 @@ public class Goods_in_delivery implements CommonEntity<Long> {
 
     @Column(nullable = false, name = "Good_amount")
     @NonNull
-    private Long time;
+    private java.sql.Time time;
 }

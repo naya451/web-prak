@@ -1,28 +1,12 @@
 package ru.msu.cmc.webprak.DAO;
 
-import lombok.Builder;
-import lombok.Getter;
-import ru.msu.cmc.webprak.models.Deliveries;
 import ru.msu.cmc.webprak.models.Supplies;
 
 import java.util.List;
 
 public interface SuppliesDAO extends CommonDAO<Supplies, Long> {
-
-    List<Supplies> getAllSuppliesByDate(java.sql.Date supplyDate);
-
-    List<Deliveries> getAllSuppliesByBuyer(String seller_name);
-    List<Deliveries> getByFilter(Filter filter);
-
-    @Builder
-    @Getter
-    class Filter {
-        private java.sql.Date date;
-        private Long amount;
-        private String seller_name;
-    }
-
-    static Filter.FilterBuilder getFilterBuilder() {
-        return Filter.builder();
-    }
+    List<Supplies> getAllSupplies(java.sql.Date supplyDate, String supply_name, int amount);
+    List<Supplies> getAllSuppliesSortedByDate(int asc, java.sql.Date supplyDate, String seller_name, int amount);
+    List<Supplies> getAllSuppliesSortedBySName(int asc, java.sql.Date supplyDate, String seller_name, int amount);
+    List<Supplies> getAllSuppliesSortedByAmount(int asc, java.sql.Date supplyDate, String seller_name, int amount);
 }

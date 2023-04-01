@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface Warehouse_conditionDAO extends CommonDAO<Warehouse_condition, Long> {
 
-    List<Warehouse_condition> getAllfreePlaces();
+    List<Warehouse_condition> getAllFreePlaces();
     Warehouse_condition getPlacesByTypes(String type);
 }

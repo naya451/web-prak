@@ -49,15 +49,15 @@ DROP TABLE IF EXISTS warehouse_condition CASCADE;
 CREATE TABLE warehouse_condition
 (
     place_id           SERIAL PRIMARY KEY,
-    room_id            INTEGER CHECK (room_id >= 0)  NOT NULL,
-    shelf_id           INTEGER CHECK (shelf_id >= 0) NOT NULL,
-    goods_type         TEXT                          NOT NULL CHECK (goods_type = 'products'
+    room_id            INTEGER CHECK (room_id >= 0 AND room_id <= 512)  NOT NULL,
+    shelf_id           INTEGER CHECK (shelf_id >= 0 AND shelf_id <= 64) NOT NULL,
+    goods_type         TEXT                                             NOT NULL CHECK (goods_type = 'products'
         OR goods_type = 'clothes'
         OR goods_type = 'devices'
         OR goods_type = 'for children'
         OR goods_type = 'for pets'),
     shelf_availability bool,
-    good_id            INTEGER                       REFERENCES goods (good_id) ON DELETE SET NULL
+    good_id            INTEGER                                          REFERENCES goods (good_id) ON DELETE SET NULL
 );
 DROP TABLE IF EXISTS buyers CASCADE;
 CREATE TABLE buyers

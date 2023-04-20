@@ -5,33 +5,29 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "buyers")
+@Table(name = "sellers")
 @Getter
 @Setter
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class Buyers implements CommonEntity<Long> {
-    public Buyers() {}
-
+public class Sellers implements CommonEntity<Long> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, name = "buyer_id")
+    @Column(nullable = false, name = "seller_id")
     private Long id;
-
-    @Column(nullable = false, name = "buyer_name")
+    @Column(nullable = false, name = "seller_name")
     @NonNull
     private String name;
-
     @Column(name = "phone")
     private String phone;
-
     @Column(name = "email")
     private String email;
-
     @Column(name = "address")
     private String address;
-
-    @Column(name = "buyer_description")
+    @Column(name = "seller_description")
     private String description;
+
+    public Sellers() {
+    }
 }

@@ -1,83 +1,89 @@
-DROP TABLE IF EXISTS Sellers CASCADE;
-CREATE TABLE Sellers (
-                           Seller_ID SERIAL PRIMARY KEY,
-                           Seller_name TEXT NOT NULL,
-                           Phone TEXT,
-                           Email TEXT,
-                           Address TEXT,
-                           Seller_description TEXT
+DROP TABLE IF EXISTS sellers CASCADE;
+CREATE TABLE sellers
+(
+    seller_id          SERIAL PRIMARY KEY,
+    seller_name        TEXT NOT NULL,
+    phone              TEXT,
+    email              TEXT,
+    address            TEXT,
+    seller_description TEXT
 );
-DROP TABLE IF EXISTS Supplies CASCADE;
-CREATE TABLE Supplies (
-                            Supply_ID SERIAL PRIMARY KEY,
-                            Supply_date DATE NOT NULL,
-                            Supply_time TIME NOT NULL,
-                            Seller_ID INTEGER NOT NULL REFERENCES Sellers(Seller_ID) ON DELETE CASCADE,
-                            Supply_comment TEXT,
-                            Sum_amount INTEGER NOT NULL CHECK (Sum_amount > 0),
-                            Seller_name TEXT NOT NULL
+DROP TABLE IF EXISTS supplies CASCADE;
+CREATE TABLE supplies
+(
+    supply_id        SERIAL PRIMARY KEY,
+    supply_date_time DATE    NOT NULL,
+    seller_id        INTEGER NOT NULL REFERENCES sellers (seller_id) ON DELETE CASCADE,
+    supply_comment   TEXT,
+    sum_amount       INTEGER NOT NULL CHECK (sum_amount > 0),
+    seller_name      TEXT    NOT NULL
 );
-
-DROP TABLE IF EXISTS Goods CASCADE;
-CREATE TABLE Goods (
-                         Good_ID SERIAL PRIMARY KEY,
-                         Good_name TEXT NOT NULL,
-                         Good_type TEXT CHECK (Good_type = 'products'
-                                                   OR Good_type = 'clothes'
-                                                   OR Good_type = 'devices'
-                                                   OR Good_type = 'for children'
-                                                   OR Good_type = 'for pets'),
-                         Availability INTEGER NOT NULL CHECK (Availability >= 0),
-                         Good_size1 INTEGER CHECK (Good_size1 > 0),
-                         Good_size2 INTEGER CHECK (Good_size2 > 0),
-                         Good_size3 INTEGER CHECK (Good_size3 > 0),
-                         Time_of_keeping DATE,
-                         Good_description TEXT,
-                         Measurement TEXT NOT NULL
+DROP TABLE IF EXISTS goods CASCADE;
+CREATE TABLE goods
+(
+    good_id          SERIAL PRIMARY KEY,
+    good_name        TEXT    NOT NULL,
+    good_type        TEXT CHECK (good_type = 'products'
+        OR good_type = 'clothes'
+        OR good_type = 'devices'
+        OR good_type = 'for children'
+        OR good_type = 'for pets'),
+    availability     INTEGER NOT NULL CHECK (availability >= 0),
+    good_size1       INTEGER CHECK (good_size1 > 0),
+    good_size2       INTEGER CHECK (good_size2 > 0),
+    good_size3       INTEGER CHECK (good_size3 > 0),
+    time_of_keeping  DATE,
+    good_description TEXT,
+    measurement      TEXT    NOT NULL
 );
-DROP TABLE IF EXISTS Goods_in_supplies CASCADE;
-CREATE TABLE Goods_in_supplies (
-                                     Position_ID SERIAL PRIMARY KEY,
-                                     Supply_ID INTEGER NOT NULL REFERENCES Supplies(Supply_ID) ON DELETE CASCADE,
-                                     Good_ID INTEGER NOT NULL REFERENCES Goods(Good_ID) ON DELETE CASCADE,
-                                     Good_amount INTEGER NOT NULL CHECK (Good_amount > 0)
+DROP TABLE IF EXISTS goods_in_supplies CASCADE;
+DROP TABLE IF EXISTS goods_in_supply CASCADE;
+CREATE TABLE goods_in_supply
+(
+    position_id SERIAL PRIMARY KEY,
+    supply_id   INTEGER NOT NULL REFERENCES supplies (supply_id) ON DELETE CASCADE,
+    good_id     INTEGER NOT NULL REFERENCES goods (good_id) ON DELETE CASCADE,
+    good_amount INTEGER NOT NULL CHECK (good_amount > 0)
 );
-DROP TABLE IF EXISTS Warehouse_condition CASCADE;
-CREATE TABLE Warehouse_condition (
-                                       Place_ID SERIAL PRIMARY KEY,
-                                       Room_ID INTEGER CHECK (Room_ID >= 0) NOT NULL ,
-                                       Shelf_ID INTEGER CHECK (Shelf_ID >= 0) NOT NULL,
-                                       Goods_type TEXT NOT NULL CHECK (Goods_type = 'products'
-                                           OR Goods_type = 'clothes'
-                                           OR Goods_type = 'devices'
-                                           OR Goods_type = 'for children'
-                                           OR Goods_type = 'for pets'),
-                                       Shelf_availability bool,
-                                       Good_ID INTEGER REFERENCES Goods(Good_ID) ON DELETE SET NULL
+DROP TABLE IF EXISTS warehouse_condition CASCADE;
+CREATE TABLE warehouse_condition
+(
+    place_id           SERIAL PRIMARY KEY,
+    room_id            INTEGER CHECK (room_id >= 0)  NOT NULL,
+    shelf_id           INTEGER CHECK (shelf_id >= 0) NOT NULL,
+    goods_type         TEXT                          NOT NULL CHECK (goods_type = 'products'
+        OR goods_type = 'clothes'
+        OR goods_type = 'devices'
+        OR goods_type = 'for children'
+        OR goods_type = 'for pets'),
+    shelf_availability bool,
+    good_id            INTEGER                       REFERENCES goods (good_id) ON DELETE SET NULL
 );
-DROP TABLE IF EXISTS Buyers CASCADE;
-CREATE TABLE Buyers (
-                          Buyer_ID SERIAL PRIMARY KEY,
-                          Buyer_name TEXT NOT NULL,
-                          Phone TEXT,
-                          Email TEXT,
-                          Address TEXT,
-                          Buyer_description TEXT
+DROP TABLE IF EXISTS buyers CASCADE;
+CREATE TABLE buyers
+(
+    buyer_id          SERIAL PRIMARY KEY,
+    buyer_name        TEXT NOT NULL,
+    phone             TEXT,
+    email             TEXT,
+    address           TEXT,
+    buyer_description TEXT
 );
-DROP TABLE IF EXISTS Deliveries CASCADE;
-CREATE TABLE Deliveries (
-                              Delivery_ID SERIAL PRIMARY KEY,
-                              Delivery_date DATE NOT NULL,
-                              Delivery_time TIME NOT NULL,
-                              Buyer_ID INTEGER NOT NULL REFERENCES Buyers(Buyer_ID) ON DELETE CASCADE,
-                              Delivery_comment TEXT,
-                              Sum_amount INTEGER NOT NULL CHECK (Sum_amount > 0),
-                              Buyer_name TEXT NOT NULL
+DROP TABLE IF EXISTS deliveries CASCADE;
+CREATE TABLE deliveries
+(
+    delivery_id        SERIAL PRIMARY KEY,
+    delivery_date_time DATE    NOT NULL,
+    buyer_id           INTEGER NOT NULL REFERENCES buyers (buyer_id) ON DELETE CASCADE,
+    delivery_comment   TEXT,
+    sum_amount         INTEGER NOT NULL CHECK (sum_amount > 0),
+    buyer_name         TEXT    NOT NULL
 );
-DROP TABLE IF EXISTS Goods_in_delivery CASCADE;
-CREATE TABLE Goods_in_delivery (
-                                     Position_ID SERIAL PRIMARY KEY,
-                                     Delivery_ID INTEGER NOT NULL REFERENCES Deliveries(Delivery_ID) ON DELETE CASCADE,
-                                     Good_ID INTEGER NOT NULL REFERENCES Goods(Good_ID) ON DELETE CASCADE,
-                                     Good_amount INTEGER NOT NULL
+DROP TABLE IF EXISTS goods_in_delivery CASCADE;
+CREATE TABLE goods_in_delivery
+(
+    position_id SERIAL PRIMARY KEY,
+    delivery_id INTEGER NOT NULL REFERENCES deliveries (delivery_id) ON DELETE CASCADE,
+    good_id     INTEGER NOT NULL REFERENCES goods (good_id) ON DELETE CASCADE,
+    good_amount INTEGER NOT NULL
 );

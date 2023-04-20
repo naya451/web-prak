@@ -4,15 +4,15 @@ VALUES (1, 'H&M', '8 (925) 111 11 11', 'handm@gmail.com', 'New-York', 'clothes s
        (3, 'CROPP', '8 (925) 333 33 33', 'cropp@yandex.ru', 'Tver', 'one more clothes seller');
 
 INSERT INTO supplies
-VALUES (1, '2022-01-02 13:30', 1, 'from h&m', 1000, 'H&M'),
-       (2, '2022-01-02 13:40', 2, 'from Zara', 1000, 'Zara'),
-       (3, '2022-01-02 13:50', 3, 'from CROPP', 1000, 'CROPP'),
-       (4, '2023-01-03 14:00', 1, 'from h&m', 1500, 'h&m'),
-       (5, '2023-01-03 14:10', 2, 'from zara', 1500, 'Zara'),
-       (6, '2023-01-03 14:20', 3, 'from CROPP', 1500, 'CROPP'),
-       (7, '2024-01-03 15:00', 1, 'from h&m', 1500, 'h&m'),
-       (8, '2024-01-03 15:10', 2, 'from zara', 1500, 'Zara'),
-       (9, '2024-01-03 15:20', 3, 'from CROPP', 1500, 'CROPP');
+VALUES (1, '2022-01-02 13:30', 1, 'from h&m', 'H&M'),
+       (2, '2022-01-02 13:40', 2, 'from Zara', 'Zara'),
+       (3, '2022-01-02 13:50', 3, 'from CROPP', 'CROPP'),
+       (4, '2023-01-03 14:00', 1, 'from h&m', 'h&m'),
+       (5, '2023-01-03 14:10', 2, 'from zara', 'Zara'),
+       (6, '2023-01-03 14:20', 3, 'from CROPP', 'CROPP'),
+       (7, '2024-01-03 15:00', 1, 'from h&m', 'h&m'),
+       (8, '2024-01-03 15:10', 2, 'from zara', 'Zara'),
+       (9, '2024-01-03 15:20', 3, 'from CROPP', 'CROPP');
 
 INSERT INTO goods (good_id, good_name, good_type, availability, good_size1, good_description, measurement)
 VALUES (1, 'jeans', 'clothes', 3, 3, 'cool jeans', 'size'),
@@ -37,15 +37,15 @@ VALUES (1, 'Mike Smith', '8 (926) 111 11 11'),
        (3, 'Ally Mads', '8 (926) 333 33 33');
 
 INSERT INTO deliveries
-VALUES (1, '2022-01-02 13:30', 1, 'to mike', 1000, 'Mike Smith'),
-       (2, '2022-01-02 13:40', 2, 'to Tom', 1000, 'Tom John'),
-       (3, '2022-01-02 13:50', 3, 'to Ally', 1000, 'Ally Mads'),
-       (4, '2023-01-03 14:00', 1, 'to mike', 1500, 'Mike Smith'),
-       (5, '2023-01-03 14:10', 2, 'to Tom', 1500, 'Tom John'),
-       (6, '2023-01-03 14:20', 3, 'to Ally', 1500, 'Ally Mads'),
-       (7, '2024-01-03 15:00', 1, 'to mike', 1500, 'Mike Smith'),
-       (8, '2024-01-03 15:10', 2, 'to Tom', 1500, 'Tom John'),
-       (9, '2024-01-03 15:20', 3, 'to Ally', 1500, 'Ally Mads');
+VALUES (1, '2022-01-02 13:30', 1, 'to mike', 'Mike Smith'),
+       (2, '2022-01-02 13:40', 2, 'to Tom', 'Tom John'),
+       (3, '2022-01-02 13:50', 3, 'to Ally', 'Ally Mads'),
+       (4, '2023-01-03 14:00', 1, 'to mike', 'Mike Smith'),
+       (5, '2023-01-03 14:10', 2, 'to Tom', 'Tom John'),
+       (6, '2023-01-03 14:20', 3, 'to Ally', 'Ally Mads'),
+       (7, '2024-01-03 15:00', 1, 'to mike', 'Mike Smith'),
+       (8, '2024-01-03 15:10', 2, 'to Tom', 'Tom John'),
+       (9, '2024-01-03 15:20', 3, 'to Ally', 'Ally Mads');
 
 INSERT INTO goods_in_delivery
 VALUES (1, 1, 1, 5),

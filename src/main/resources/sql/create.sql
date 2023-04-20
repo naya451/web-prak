@@ -15,7 +15,6 @@ CREATE TABLE supplies
     supply_date_time DATE    NOT NULL,
     seller_id        INTEGER NOT NULL REFERENCES sellers (seller_id) ON DELETE CASCADE,
     supply_comment   TEXT,
-    sum_amount       INTEGER NOT NULL CHECK (sum_amount > 0),
     seller_name      TEXT    NOT NULL
 );
 DROP TABLE IF EXISTS goods CASCADE;
@@ -76,7 +75,6 @@ CREATE TABLE deliveries
     delivery_date_time DATE    NOT NULL,
     buyer_id           INTEGER NOT NULL REFERENCES buyers (buyer_id) ON DELETE CASCADE,
     delivery_comment   TEXT,
-    sum_amount         INTEGER NOT NULL CHECK (sum_amount > 0),
     buyer_name         TEXT    NOT NULL
 );
 DROP TABLE IF EXISTS goods_in_delivery CASCADE;

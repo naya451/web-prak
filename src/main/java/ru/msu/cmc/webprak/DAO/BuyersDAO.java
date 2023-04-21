@@ -1,27 +1,32 @@
 package ru.msu.cmc.webprak.DAO;
 
-import lombok.Builder;
-import lombok.Getter;
 import ru.msu.cmc.webprak.models.Buyers;
+import ru.msu.cmc.webprak.models.Deliveries;
 
 import java.util.List;
 
 public interface BuyersDAO extends CommonDAO<Buyers, Long> {
-
     List<Buyers> getAllBuyers();
+
     List<Buyers> getAllBuyersByName(String BuyersName);
-    
-    Buyers getSingleBuyersByName(String BuyersName);
-    String getYearsOfLife(Buyers Buyers);
-    List<Buyers> getByFilter(Filter filter);
 
-    @Builder
-    @Getter
-    class Filter {
-        private String name;
-    }
+    Long getNumberYearsDeliveries(Long id);
 
-    static Filter.FilterBuilder getFilterBuilder() {
-        return Filter.builder();
-    }
+    Long getNumberDeliveries(Long id);
+
+    List<Deliveries> getRecentDeliveries(Long id);
+
+    List<Buyers> getAllBuyersByNameSortedWithNameASC(String BuyersName);
+
+    List<Buyers> getAllBuyersByNameSortedWithNameDESC(String BuyersName);
+
+    List<Buyers> getAllBuyersByNameSortedWithYearsDeliveriesASC(String BuyersName);
+
+    List<Buyers> getAllBuyersByNameSortedWithYearsDeliveriesDESC(String BuyersName);
+
+    List<Buyers> getAllBuyersByNameSortedWithDeliveriesASC(String BuyersName);
+
+    List<Buyers> getAllBuyersByNameSortedWithDeliveriesDESC(String BuyersName);
+
+    Buyers getSingleBuyerByName(String BuyersName);
 }

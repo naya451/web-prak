@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS supplies CASCADE;
 CREATE TABLE supplies
 (
     supply_id        SERIAL PRIMARY KEY,
-    supply_date_time DATE    NOT NULL,
+    supply_date_time DATE    NOT NULL CHECK ( supply_date_time <= current_timestamp),
     seller_id        INTEGER NOT NULL REFERENCES sellers (seller_id) ON DELETE CASCADE,
     supply_comment   TEXT,
     seller_name      TEXT    NOT NULL
@@ -21,7 +21,7 @@ DROP TABLE IF EXISTS goods CASCADE;
 CREATE TABLE goods
 (
     good_id          SERIAL PRIMARY KEY,
-    good_name        TEXT    NOT NULL,
+    good_name        TEXT NOT NULL,
     good_type        TEXT CHECK (good_type = 'products'
         OR good_type = 'clothes'
         OR good_type = 'devices'
@@ -32,7 +32,7 @@ CREATE TABLE goods
     good_size3       INTEGER CHECK (good_size3 > 0),
     time_of_keeping  DATE,
     good_description TEXT,
-    measurement      TEXT    NOT NULL
+    measurement      TEXT NOT NULL
 );
 DROP TABLE IF EXISTS goods_in_supplies CASCADE;
 DROP TABLE IF EXISTS goods_in_supply CASCADE;
@@ -71,7 +71,7 @@ DROP TABLE IF EXISTS deliveries CASCADE;
 CREATE TABLE deliveries
 (
     delivery_id        SERIAL PRIMARY KEY,
-    delivery_date_time DATE    NOT NULL,
+    delivery_date_time DATE    NOT NULL CHECK ( delivery_date_time <= current_timestamp), ,
     buyer_id           INTEGER NOT NULL REFERENCES buyers (buyer_id) ON DELETE CASCADE,
     delivery_comment   TEXT,
     buyer_name         TEXT    NOT NULL

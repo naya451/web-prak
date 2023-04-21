@@ -27,7 +27,6 @@ CREATE TABLE goods
         OR good_type = 'devices'
         OR good_type = 'for children'
         OR good_type = 'for pets'),
-    availability     INTEGER NOT NULL CHECK (availability >= 0),
     good_size1       INTEGER CHECK (good_size1 > 0),
     good_size2       INTEGER CHECK (good_size2 > 0),
     good_size3       INTEGER CHECK (good_size3 > 0),

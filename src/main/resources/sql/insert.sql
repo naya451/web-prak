@@ -1,6 +1,8 @@
+SELECT * from goods;
+
 INSERT INTO sellers
 VALUES (1, 'H&M', '8 (925) 111 11 11', 'handm@gmail.com', 'New-York', 'clothes seller'),
-       (2, 'Zara', '8 (925) 222 22 22', 'zaea@outlook.com', 'Los Angeles', 'another clothes seller'),
+       (2, 'Zara', '8 (925) 222 22 22', 'zara@outlook.com', 'Los Angeles', 'another clothes seller'),
        (3, 'CROPP', '8 (925) 333 33 33', 'cropp@yandex.ru', 'Tver', 'one more clothes seller');
 
 INSERT INTO supplies
@@ -14,10 +16,10 @@ VALUES (1, '2022-01-02 13:30', 1, 'from h&m', 'H&M'),
        (8, '2024-01-03 15:10', 2, 'from zara', 'Zara'),
        (9, '2024-01-03 15:20', 3, 'from CROPP', 'CROPP');
 
-INSERT INTO goods (good_id, good_name, good_type, availability, good_size1, good_description, measurement)
-VALUES (1, 'jeans', 'clothes', 3, 3, 'cool jeans', 'size'),
-       (2, 'boots', 'for children', 2, 35, 'tiny boots', 'size'),
-       (3, 'chocolate', 'products', 6, 100, 'tasty chocolate', 'gr');
+INSERT INTO goods (good_id, good_name, good_type, good_size1, good_description, measurement)
+VALUES (1, 'jeans', 'clothes', 3, 'cool jeans', 'size'),
+       (2, 'boots', 'for children', 35, 'tiny boots', 'size'),
+       (3, 'chocolate', 'products', 100, 'tasty chocolate', 'gr');
 
 INSERT INTO goods_in_supply
 VALUES (1, 1, 1, 5),
@@ -52,3 +54,5 @@ VALUES (1, 1, 1, 5),
        (2, 9, 2, 10),
        (3, 1, 2, 4),
        (4, 7, 2, 8);
+
+SELECT * from goods;

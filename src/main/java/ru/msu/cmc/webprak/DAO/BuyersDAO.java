@@ -8,7 +8,9 @@ import java.util.List;
 
 public interface BuyersDAO extends CommonDAO<Buyers, Long> {
 
+    List<Buyers> getAllBuyers();
     List<Buyers> getAllBuyersByName(String BuyersName);
+    
     Buyers getSingleBuyersByName(String BuyersName);
     String getYearsOfLife(Buyers Buyers);
     List<Buyers> getByFilter(Filter filter);

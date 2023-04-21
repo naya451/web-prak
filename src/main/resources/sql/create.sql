@@ -30,7 +30,7 @@ CREATE TABLE goods
     good_size1       INTEGER CHECK (good_size1 > 0),
     good_size2       INTEGER CHECK (good_size2 > 0),
     good_size3       INTEGER CHECK (good_size3 > 0),
-    time_of_keeping  DATE,
+    time_of_keeping  INTEGER,
     good_description TEXT,
     measurement      TEXT NOT NULL
 );
@@ -71,7 +71,7 @@ DROP TABLE IF EXISTS deliveries CASCADE;
 CREATE TABLE deliveries
 (
     delivery_id        SERIAL PRIMARY KEY,
-    delivery_date_time DATE    NOT NULL CHECK ( delivery_date_time <= current_timestamp), ,
+    delivery_date_time DATE    NOT NULL CHECK ( delivery_date_time <= current_timestamp),
     buyer_id           INTEGER NOT NULL REFERENCES buyers (buyer_id) ON DELETE CASCADE,
     delivery_comment   TEXT,
     buyer_name         TEXT    NOT NULL

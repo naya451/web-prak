@@ -18,7 +18,7 @@ public class Deliveries implements CommonEntity<Long> {
     private Long id;
     @Column(nullable = false, name = "delivery_date_time")
     @NonNull
-    private Long date_time;
+    private java.sql.Date date_time;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "buyer_id")
     @ToString.Exclude

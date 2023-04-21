@@ -1,4 +1,4 @@
-package ru.msu.cmc.webprak.DAO.impl;
+package ru.msu.cmc.webprak.DAO.implementation;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,13 +13,13 @@ import java.io.Serializable;
 import java.util.Collection;
 
 @Repository
-public abstract class CommonDAOImpl<T extends CommonEntity<ID>, ID extends Serializable> implements CommonDAO<T, ID> {
+public abstract class CommonDAOImplementation<T extends CommonEntity<ID>, ID extends Serializable> implements CommonDAO<T, ID> {
 
     protected SessionFactory sessionFactory;
 
     protected Class<T> persistentClass;
 
-    public CommonDAOImpl(Class<T> entityClass){
+    public CommonDAOImplementation(Class<T> entityClass){
         this.persistentClass = entityClass;
     }
 

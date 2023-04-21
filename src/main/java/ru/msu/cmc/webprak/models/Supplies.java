@@ -18,7 +18,7 @@ public class Supplies implements CommonEntity<Long> {
     private Long id;
     @Column(nullable = false, name = "supply_date_time")
     @NonNull
-    private Long date_time;
+    private java.sql.Date date_time;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "seller_id")
     @ToString.Exclude

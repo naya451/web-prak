@@ -1,8 +1,7 @@
 package ru.msu.cmc.webprak.models;
 
+import jakarta.persistence.*;
 import lombok.*;
-
-import javax.persistence.*;
 
 @Entity
 @Table(name = "goods_in_supply")

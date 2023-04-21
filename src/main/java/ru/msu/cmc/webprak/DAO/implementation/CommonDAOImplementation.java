@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import ru.msu.cmc.webprak.DAO.CommonDAO;
 import ru.msu.cmc.webprak.models.CommonEntity;
 
-import javax.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.CriteriaQuery;
 import java.io.Serializable;
 import java.util.Collection;
 

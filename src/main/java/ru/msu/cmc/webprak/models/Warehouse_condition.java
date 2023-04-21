@@ -2,7 +2,7 @@ package ru.msu.cmc.webprak.models;
 
 import lombok.*;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "warehouse_condition")

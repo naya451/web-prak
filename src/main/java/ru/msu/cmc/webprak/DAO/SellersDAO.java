@@ -9,7 +9,6 @@ public interface SellersDAO extends CommonDAO<Sellers, Long> {
 
     List<Sellers> getAllSellersByName(String SellersName);
 
-    public List<Sellers> getSellersForGoos(Long id);
     List<Sellers> getAllSellersByNameSortedWithNameASC(String SellersName);
 
     List<Sellers> getAllSellersByNameSortedWithNameDESC(String SellersName);

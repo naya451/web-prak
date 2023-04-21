@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/src/main/resources/sql/create.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/sql/insert.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/sql/triggers.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/java/ru/msu/cmc/webprak/DAO/BuyersDAOTest.java" dialect="PostgreSQL" />
   </component>
 </project>

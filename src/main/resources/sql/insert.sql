@@ -21,20 +21,20 @@ VALUES (1, '2023-01-01', 1, 'from H&M', 'H&M'),
 
 INSERT INTO goods (good_id, good_name, good_type, good_size1, good_description, measurement)
 VALUES (1, 'jeans', 'clothes', 3, 'cool jeans', 'size'),
-       (2, 'boots', 'for children', 35, 'tiny boots', 'size'),
+       (2, 'brown jeans', 'for children', 35, 'tiny jeans', 'size'),
        (3, 'chocolate', 'products', 100, 'tasty chocolate', 'gr');
 
 INSERT INTO goods_in_supply
-VALUES (1, 7, 1, 5),
-       (2, 9, 2, 10),
-       (3, 1, 2, 4),
-       (4, 7, 2, 8);
+VALUES (1, 7, 1, 2),
+       (2, 9, 2, 2),
+       (3, 1, 2, 2),
+       (4, 7, 2, 1);
 
 INSERT INTO warehouse_condition
 VALUES (1, 1, 1, 'clothes', false, 1),
        (2, 1, 2, 'for children', false, 2),
-       (3, 3, 10, 'products', false, 3),
-       (4, 4, 6, 'for children', true, NULL);
+       (3, 3, 10, 'for children', false, 2),
+       (4, 4, 6, 'products', true, NULL);
 
 INSERT INTO buyers (buyer_id, buyer_name, phone)
 VALUES (1, 'Mike Smith', '8 (926) 111 11 11'),
@@ -55,13 +55,13 @@ VALUES (1, '2023-01-02', 1, 'to mike', 'Mike Smith'),
        (11, '2012-1-03', 1, 'To mike', 'Mike Smith');
 
 INSERT INTO goods_in_delivery
-VALUES (1, 7, 1, 5),
-       (2, 9, 2, 10),
-       (3, 1, 2, 4),
-       (4, 7, 2, 8);
+VALUES (1, 7, 1, 1),
+       (2, 9, 2, 1),
+       (3, 1, 2, 1),
+       (4, 7, 2, 1);
 
 SELECT *
 from goods;
 
 SELECT current_timestamp - interval '1 year';
-SELECT * FROM Goods_in_supply WHERE supply_id = 7;
+SELECT * FROM Buyers;

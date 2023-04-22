@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import ru.msu.cmc.webprak.models.Buyers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -66,5 +67,26 @@ public class BuyersDAOTest {
         assertEquals(2, sortSmithsWithDeliveries.size());
         assertEquals(1, sortSmithsWithDeliveries.get(0).getId());
         assertEquals(2, sortSmithsWithDeliveries.get(1).getId());
+    }
+
+    @Test
+    void testCommon() {
+        List<Buyers> buyersList = new ArrayList<>();
+        Buyers buyersListItem = (new Buyers(123L, "Holly Anderson", null, null, null, null));
+        buyersList.add(new Buyers(12L, "Pamella Ji", null, null, null, null));
+        buyersDAO.save(buyersListItem);
+        buyersDAO.saveCollection(buyersList);
+        Buyers tmp = buyersDAO.getSingleBuyerByName("Pamella Ji");
+        assertEquals("Pamella Ji", tmp.getName());
+        buyersListItem.setName("Holly Medi");
+        buyersDAO.update(buyersListItem);
+        tmp = buyersDAO.getSingleBuyerByName("Holly Medi");
+        assertEquals("Holly Medi", tmp.getName());
+        buyersDAO.delete(buyersListItem);
+        tmp = buyersDAO.getSingleBuyerByName("Holly Medi");
+        assertNull(tmp);
+        buyersDAO.deleteById(2L);
+        tmp = buyersDAO.getById(2L);
+        assertNull(tmp);
     }
 }

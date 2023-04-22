@@ -4,6 +4,8 @@ import lombok.*;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Entity
 @Table(name = "goods")
 @Getter
@@ -36,5 +38,15 @@ public class Goods implements CommonEntity<Long> {
     private String measurement;
 
     public Goods() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Goods other = (Goods) o;
+        return Objects.equals(id, other.id)
+                && name.equals(other.name)
+                && Objects.equals(type, other.type);
     }
 }

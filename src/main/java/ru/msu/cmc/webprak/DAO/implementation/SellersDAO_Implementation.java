@@ -56,7 +56,7 @@ public class SellersDAO_Implementation extends CommonDAOImplementation<Sellers, 
     public List<Sellers> getAllSellersByNameSortedWithYearsSuppliesASC(String SellersName) {
         try (Session session = sessionFactory.openSession()) {
             Query<Sellers> query = session.createQuery("FROM Sellers WHERE name LIKE :gotName " +
-                            "ORDER BY getNumberYearsSupplies(id) ASC", Sellers.class)
+                            "ORDER BY getnumberyearssupplies(id) ASC", Sellers.class)
                     .setParameter("gotName", likeExpr(SellersName));
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
@@ -66,7 +66,7 @@ public class SellersDAO_Implementation extends CommonDAOImplementation<Sellers, 
     public List<Sellers> getAllSellersByNameSortedWithYearsSuppliesDESC(String SellersName) {
         try (Session session = sessionFactory.openSession()) {
             Query<Sellers> query = session.createQuery("FROM Sellers WHERE name LIKE :gotName " +
-                            "ORDER BY getNumberYearsSupplies(id) DESC", Sellers.class)
+                            "ORDER BY getnumberyearssupplies(id) DESC", Sellers.class)
                     .setParameter("gotName", likeExpr(SellersName));
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
@@ -76,7 +76,7 @@ public class SellersDAO_Implementation extends CommonDAOImplementation<Sellers, 
     public List<Sellers> getAllSellersByNameSortedWithSuppliesASC(String SellersName) {
         try (Session session = sessionFactory.openSession()) {
             Query<Sellers> query = session.createQuery("FROM Sellers WHERE name LIKE :gotName " +
-                            "ORDER BY getNumberSupplies(id) ASC", Sellers.class)
+                            "ORDER BY getnumbersupplies(id) ASC", Sellers.class)
                     .setParameter("gotName", likeExpr(SellersName));
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
@@ -86,7 +86,7 @@ public class SellersDAO_Implementation extends CommonDAOImplementation<Sellers, 
     public List<Sellers> getAllSellersByNameSortedWithSuppliesDESC(String SellersName) {
         try (Session session = sessionFactory.openSession()) {
             Query<Sellers> query = session.createQuery("FROM Sellers WHERE name LIKE :gotName " +
-                            "ORDER BY getNumberSupplies(id) DESC", Sellers.class)
+                            "ORDER BY getnumbersupplies(id) DESC", Sellers.class)
                     .setParameter("gotName", likeExpr(SellersName));
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }

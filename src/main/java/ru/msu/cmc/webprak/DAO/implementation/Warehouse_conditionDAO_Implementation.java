@@ -4,6 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 import ru.msu.cmc.webprak.DAO.Warehouse_conditionDAO;
+import ru.msu.cmc.webprak.models.Goods;
 import ru.msu.cmc.webprak.models.Warehouse_condition;
 
 import java.util.List;
@@ -15,22 +16,17 @@ public class Warehouse_conditionDAO_Implementation extends CommonDAOImplementati
         super(Warehouse_condition.class);
     }
 
-    private String likeExpr(String param) {
-        return "%" + param + "%";
-    }
-
     @Override
     public List<Warehouse_condition> getGetFreePositionsByType(String type) {
         try (Session session = sessionFactory.openSession()) {
             Query<Warehouse_condition> query = session.createQuery("FROM Warehouse_condition " +
-                            "WHERE type = :type AND availability = true", Warehouse_condition.class)
-                    .setParameter("type", type);
+                            " WHERE (availability = true) AND (type LIKE :type) ", Warehouse_condition.class)
+                                    .setParameter("type", type);
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
     }
-
     @Override
-    public List<Warehouse_condition> getPlaces(Long id) {
+    public List<Warehouse_condition> getPlaces(Goods id) {
         try (Session session = sessionFactory.openSession()) {
             Query<Warehouse_condition> query = session.createQuery("FROM Warehouse_condition " +
                             "WHERE good = :id", Warehouse_condition.class)

@@ -18,7 +18,7 @@ public class Goods_in_supply implements CommonEntity<Long> {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "supply_id")
     @ToString.Exclude
-    private Deliveries supply;
+    private Supplies supply;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "good_id")
     @ToString.Exclude

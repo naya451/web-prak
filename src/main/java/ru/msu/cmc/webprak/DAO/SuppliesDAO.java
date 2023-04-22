@@ -7,7 +7,7 @@ import java.util.List;
 public interface SuppliesDAO extends CommonDAO<Supplies, Long> {
     List<Supplies> getAllSupplies();
 
-    List<Supplies> getAllSuppliesBySeller(Long id);
+    List<Supplies> getAllSuppliesBySeller(String name);
 
     List<Supplies> getAllSuppliesByPeriod(java.sql.Date start, java.sql.Date end);
 

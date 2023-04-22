@@ -76,7 +76,7 @@ public class BuyersDAO_Implementation extends CommonDAOImplementation<Buyers, Lo
     public List<Buyers> getAllBuyersByNameSortedWithDeliveriesASC(String BuyersName) {
         try (Session session = sessionFactory.openSession()) {
             Query<Buyers> query = session.createQuery("FROM Buyers WHERE name LIKE :gotName " +
-                            "ORDER BY getNumberDeliveries(id) ASC", Buyers.class)
+                            "ORDER BY getdeliveriesnumber(id) ASC", Buyers.class)
                     .setParameter("gotName", likeExpr(BuyersName));
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
@@ -86,7 +86,7 @@ public class BuyersDAO_Implementation extends CommonDAOImplementation<Buyers, Lo
     public List<Buyers> getAllBuyersByNameSortedWithDeliveriesDESC(String BuyersName) {
         try (Session session = sessionFactory.openSession()) {
             Query<Buyers> query = session.createQuery("FROM Buyers WHERE name LIKE :gotName " +
-                            "ORDER BY getNumberDeliveries(id) DESC", Buyers.class)
+                            "ORDER BY getdeliveriesnumber(id) DESC", Buyers.class)
                     .setParameter("gotName", likeExpr(BuyersName));
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }

@@ -25,11 +25,11 @@ public class DeliveriesDAO_Implementation extends CommonDAOImplementation<Delive
     }
 
     @Override
-    public List<Deliveries> getAllDeliveriesByBuyer(Long id) {
+    public List<Deliveries> getAllDeliveriesByBuyer(String buyer) {
         try (Session session = sessionFactory.openSession()) {
             Query<Deliveries> query = session.createQuery("FROM Deliveries " +
-                            "WHERE buyer = :id", Deliveries.class)
-                    .setParameter("id", id);
+                            "WHERE buyer_name LIKE :name", Deliveries.class)
+                    .setParameter("name", buyer);
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
     }
@@ -38,8 +38,8 @@ public class DeliveriesDAO_Implementation extends CommonDAOImplementation<Delive
     public List<Deliveries> getAllDeliveriesByPeriod(Date start, Date end) {
         try (Session session = sessionFactory.openSession()) {
             Query<Deliveries> query = session.createQuery("FROM Deliveries " +
-                            "WHERE date_time <= :end AND date_time >= :start", Deliveries.class)
-                    .setParameter("end", end).setParameter("start", start);
+                            "WHERE date_time between :start and :end ", Deliveries.class)
+                    .setParameter("start", start).setParameter("end", end);
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
     }

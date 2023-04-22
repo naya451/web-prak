@@ -25,11 +25,11 @@ public class SuppliesDAO_Implementation extends CommonDAOImplementation<Supplies
     }
 
     @Override
-    public List<Supplies> getAllSuppliesBySeller(Long id) {
+    public List<Supplies> getAllSuppliesBySeller(String name) {
         try (Session session = sessionFactory.openSession()) {
             Query<Supplies> query = session.createQuery("FROM Supplies " +
-                            "WHERE seller = :id", Supplies.class)
-                    .setParameter("id", id);
+                            "WHERE seller_name LIKE :name", Supplies.class)
+                    .setParameter("name", name);
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
     }

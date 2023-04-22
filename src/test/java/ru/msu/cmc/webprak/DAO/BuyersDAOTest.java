@@ -8,11 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import ru.msu.cmc.webprak.models.Buyers;
+import ru.msu.cmc.webprak.models.Deliveries;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -22,8 +24,10 @@ public class BuyersDAOTest {
     @Autowired
     private BuyersDAO buyersDAO;
     @Autowired
+    private DeliveriesDAO deliveriesDAO;
+    @Autowired
     private EntityManagerFactory entityManagerFactory;
-    
+
     @Test
     void testSimpleManipulations() {
         List<Buyers> list_of_buyers = (List<Buyers>) buyersDAO.getAll();
@@ -41,6 +45,19 @@ public class BuyersDAOTest {
         assertNull(unreal_buyers2);
     }
 
+    @Test
+    void testSortings() {
+        List<Buyers> sortSmiths = buyersDAO.getAllBuyersByNameSortedWithNameASC("Smith");
+        assertEquals(2, sortSmiths.size());
+        assertEquals(1, sortSmiths.get(0).getId());
+        assertEquals(5, sortSmiths.get(1).getId());
+        sortSmiths = buyersDAO.getAllBuyersByNameSortedWithNameDESC("Smith");
+        assertEquals(2, sortSmiths.size());
+        assertEquals(5, sortSmiths.get(0).getId());
+        assertEquals(1, sortSmiths.get(1).getId());
+    }
+
+
     @BeforeEach
     void beforeEach() {
         List<Buyers> buyersList = new ArrayList<>();
@@ -48,8 +65,17 @@ public class BuyersDAOTest {
         buyersList.add(new Buyers(2L, "Lavrenty", null, null, null, "MSU student"));
         buyersList.add(new Buyers(3L, "Ally Gordon", null, null, null, "another buyer"));
         buyersList.add(new Buyers(4L, "Serkan Bolat", null, null, null, "Architector"));
-        buyersList.add(new Buyers(5L, "Tom Holland", null, null, null, "Umbrella fan"));
+        buyersList.add(new Buyers(5L, "Tom Smith", null, null, null, "Umbrella fan"));
         buyersDAO.saveCollection(buyersList);
+        List<Deliveries> deliveriesList = new ArrayList<>();
+        java.sql.Date tmp = new java.sql.Date(2022, 11, 5);
+        Deliveries t1 = new Deliveries(1L, tmp, buyersDAO.getSingleBuyerByName("Mike Smith"), null, "Mike Smith");
+        deliveriesList.add(t1);
+        //deliveriesList.add(new Deliveries(2L, new java.sql.Date(2021, 4, 5), buyersDAO.getSingleBuyerByName("Mike Smith"), null, "Mike Smith"));
+        //deliveriesList.add(new Deliveries(3L, new java.sql.Date(2022, 12, 5), buyersDAO.getSingleBuyerByName("Mike Smith"), null, "Mike Smith"));
+        //deliveriesList.add(new Deliveries(4L, new java.sql.Date(2022, 12, 10), buyersDAO.getSingleBuyerByName("Ally Gordon"), null, "Ally Gordon"));
+        //deliveriesList.add(new Deliveries(5L, new java.sql.Date(2020, 12, 10), buyersDAO.getSingleBuyerByName("Ally Gordon"), null, "Ally Gordon"));
+        //deliveriesDAO.saveCollection(deliveriesList);
     }
 
     @BeforeAll
@@ -57,8 +83,10 @@ public class BuyersDAOTest {
     void annihilation() {
         try (EntityManager entityManager = entityManagerFactory.createEntityManager()) {
             entityManager.getTransaction().begin();
+            entityManager.createNativeQuery("TRUNCATE deliveries RESTART IDENTITY CASCADE;").executeUpdate();
+            entityManager.createNativeQuery("ALTER SEQUENCE deliveries_delivery_id_seq RESTART WITH 1;").executeUpdate();
             entityManager.createNativeQuery("TRUNCATE buyers RESTART IDENTITY CASCADE;").executeUpdate();
-            //entityManager.createNativeQuery("ALTER SEQUENCE buyer_buyer_id_seq RESTART WITH 1;").executeUpdate();
+            entityManager.createNativeQuery("ALTER SEQUENCE buyers_buyer_id_seq RESTART WITH 1;").executeUpdate();
             entityManager.getTransaction().commit();
         }
     }

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.msu.cmc.webprak.DAO.BuyersDAOTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-21T21:13:17" hostname="anastasia-huawei" time="2.793">
+<testsuite name="ru.msu.cmc.webprak.DAO.BuyersDAOTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-04-22T08:15:59" hostname="anastasia-huawei" time="5.659">
   <properties/>
-  <testcase name="testSimpleManipulations()" classname="ru.msu.cmc.webprak.DAO.BuyersDAOTest" time="2.793"/>
-  <system-out><![CDATA[00:13:08.090 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [BuyersDAOTest]: using SpringBootContextLoader
-00:13:08.102 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [ru.msu.cmc.webprak.DAO.BuyersDAOTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-00:13:08.104 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ru.msu.cmc.webprak.DAO.BuyersDAOTest]: BuyersDAOTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-00:13:08.167 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [BuyersDAOTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
-00:13:08.340 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/anastasia/web-prak/build/classes/java/main/ru/msu/cmc/webprak/WebprakApplication.class]
-00:13:08.343 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ru.msu.cmc.webprak.WebprakApplication for test class ru.msu.cmc.webprak.DAO.BuyersDAOTest
-00:13:08.522 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [BuyersDAOTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+  <testcase name="testSortings()" classname="ru.msu.cmc.webprak.DAO.BuyersDAOTest" time="4.001"/>
+  <testcase name="testSimpleManipulations()" classname="ru.msu.cmc.webprak.DAO.BuyersDAOTest" time="1.652"/>
+  <system-out><![CDATA[11:15:40.562 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [BuyersDAOTest]: using SpringBootContextLoader
+11:15:40.584 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [ru.msu.cmc.webprak.DAO.BuyersDAOTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:15:40.588 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ru.msu.cmc.webprak.DAO.BuyersDAOTest]: BuyersDAOTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:15:40.664 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [BuyersDAOTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+11:15:40.963 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/anastasia/web-prak/build/classes/java/main/ru/msu/cmc/webprak/WebprakApplication.class]
+11:15:40.966 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ru.msu.cmc.webprak.WebprakApplication for test class ru.msu.cmc.webprak.DAO.BuyersDAOTest
+11:15:41.381 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [BuyersDAOTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -18,14 +19,14 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.4)
 
-2023-04-22T00:13:09.225+03:00  INFO 16978 --- [    Test worker] ru.msu.cmc.webprak.DAO.BuyersDAOTest     : Starting BuyersDAOTest using Java 19.0.2 with PID 16978 (started by anastasia in /home/anastasia/web-prak)
-2023-04-22T00:13:09.229+03:00  INFO 16978 --- [    Test worker] ru.msu.cmc.webprak.DAO.BuyersDAOTest     : No active profile set, falling back to 1 default profile: "default"
-2023-04-22T00:13:10.563+03:00  INFO 16978 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-22T00:13:10.613+03:00  INFO 16978 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JPA repository interfaces.
-2023-04-22T00:13:11.504+03:00  INFO 16978 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-22T00:13:12.789+03:00  INFO 16978 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-04-22T00:13:15.142+03:00  INFO 16978 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-22T00:13:16.637+03:00  INFO 16978 --- [    Test worker] ru.msu.cmc.webprak.DAO.BuyersDAOTest     : Started BuyersDAOTest in 8.055 seconds (process running for 10.617)
+2023-04-22T11:15:42.647+03:00  INFO 126579 --- [    Test worker] ru.msu.cmc.webprak.DAO.BuyersDAOTest     : Starting BuyersDAOTest using Java 19.0.2 with PID 126579 (started by anastasia in /home/anastasia/web-prak)
+2023-04-22T11:15:42.652+03:00  INFO 126579 --- [    Test worker] ru.msu.cmc.webprak.DAO.BuyersDAOTest     : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T11:15:45.953+03:00  INFO 126579 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-22T11:15:46.057+03:00  INFO 126579 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 0 JPA repository interfaces.
+2023-04-22T11:15:47.375+03:00  INFO 126579 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-22T11:15:49.560+03:00  INFO 126579 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-04-22T11:15:55.422+03:00  INFO 126579 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-22T11:15:58.667+03:00  INFO 126579 --- [    Test worker] ru.msu.cmc.webprak.DAO.BuyersDAOTest     : Started BuyersDAOTest in 17.145 seconds (process running for 22.948)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

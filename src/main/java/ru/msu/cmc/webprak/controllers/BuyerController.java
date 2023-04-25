@@ -12,6 +12,8 @@ import ru.msu.cmc.webprak.DAO.implementation.BuyersDAO_Implementation;
 import ru.msu.cmc.webprak.DAO.implementation.DeliveriesDAO_Implementation;
 import ru.msu.cmc.webprak.models.Buyers;
 
+import java.util.List;
+
 @Controller
 public class BuyerController {
 
@@ -21,13 +23,13 @@ public class BuyerController {
     @Autowired
     private final DeliveriesDAO deliveriesDAO = new DeliveriesDAO_Implementation();
 
-   /* @GetMapping("/buyers")
+    @GetMapping("/buyers")
     public String peopleListPage(Model model) {
-        List<Buyers> people = (List<Buyers>) buyersDAO.getAll();
-        model.addAttribute("people", people);
+        List<Buyers> buyers = (List<Buyers>) buyersDAO.getAll();
+        model.addAttribute("buyers", buyers);
         model.addAttribute("buyerService", buyersDAO);
         return "buyers";
-    }*/
+    }
 
     @GetMapping("/buyer")
     public String buyerPage(@RequestParam(name = "buyerId") Long buyerId, Model model) {

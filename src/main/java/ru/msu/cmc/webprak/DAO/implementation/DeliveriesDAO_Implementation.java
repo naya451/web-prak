@@ -33,6 +33,15 @@ public class DeliveriesDAO_Implementation extends CommonDAOImplementation<Delive
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
     }
+    @Override
+    public List<Deliveries> getAllDeliveriesByBuyerLimit5(String buyer) {
+        try (Session session = sessionFactory.openSession()) {
+            Query<Deliveries> query = session.createQuery("FROM Deliveries " +
+                            "WHERE buyer_name LIKE :name LIMIT 5", Deliveries.class)
+                    .setParameter("name", buyer);
+            return query.getResultList().size() == 0 ? null : query.getResultList();
+        }
+    }
 
     @Override
     public List<Deliveries> getAllDeliveriesByPeriod(Date start, Date end) {

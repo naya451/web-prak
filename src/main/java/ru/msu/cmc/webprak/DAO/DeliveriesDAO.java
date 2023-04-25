@@ -9,6 +9,8 @@ public interface DeliveriesDAO extends CommonDAO<Deliveries, Long> {
 
     List<Deliveries> getAllDeliveriesByBuyer(String id);
 
+    List<Deliveries> getAllDeliveriesByBuyerLimit5(String id);
+
     List<Deliveries> getAllDeliveriesByPeriod(java.sql.Date start, java.sql.Date end);
 
     List<Deliveries> getAllDeliveriesByPeriodSortedWithDateASC(java.sql.Date start, java.sql.Date end);

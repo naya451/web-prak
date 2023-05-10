@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <title>Поставщики</title>
+    <title>Товары</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -18,8 +18,8 @@
 <div th:replace="general :: page-header"> </div>
 
 <div class="indent">
-    <form method="get" action="/editBuyer">
-        <button id="addBuyerButton" type="submit" class="btn btn-primary">Добавить поставщика</button>
+    <form method="get" action="/editGood">
+        <button id="addGoodButton" type="submit" class="btn btn-primary">Добавить товар</button>
     </form>
 
     <br>
@@ -28,17 +28,17 @@
         <thead class="thead-dark">
         <tr>
             <th scope="col">Название</th>
-            <th scope="col">Телефон</th>
+            <th scope="col">Описание</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:if="${buyers.isEmpty()}">
-            <td colspan="6"> В базе пока нет ни одного поставщика. <a href="/editBuyer">Необходимо добавить</a></td>
+        <tr th:if="${goods.isEmpty()}">
+            <td colspan="6"> В базе пока нет ни одного товара. <a href="/editGood">Необходимо добавить</a></td>
         </tr>
-        <tr th:each="buyer : ${buyers}">
-            <td><a th:href="'/buyer?buyerId=' + ${buyer.getId()}"><span
-                    th:text="${buyer.getName()}"><span
-                    th:text="${buyer.getPhone()}"></span>  </span></a></td>
+        <tr th:each="good : ${goods}">
+            <td><a th:href="'/good?goodId=' + ${good.getId()}"><span
+                    th:text="${good.getName()}"><span
+                    th:text="${good.getDescription()}"></span>  </span></a></td>
         </tr>
         </tbody>
     </table>

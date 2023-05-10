@@ -18,8 +18,8 @@
 <div th:replace="general :: page-header"> </div>
 
 <div class="indent">
-    <form method="get" action="/editBuyer">
-        <button id="addBuyerButton" type="submit" class="btn btn-primary">Добавить поставщика</button>
+    <form method="get" action="/editSeller">
+        <button id="addSellerButton" type="submit" class="btn btn-primary">Добавить поставщика</button>
     </form>
 
     <br>
@@ -32,13 +32,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:if="${buyers.isEmpty()}">
-            <td colspan="6"> В базе пока нет ни одного поставщика. <a href="/editBuyer">Необходимо добавить</a></td>
+        <tr th:if="${sellers.isEmpty()}">
+            <td colspan="6"> В базе пока нет ни одного поставщика. <a href="/editSeller">Необходимо добавить</a></td>
         </tr>
-        <tr th:each="buyer : ${buyers}">
-            <td><a th:href="'/buyer?buyerId=' + ${buyer.getId()}"><span
-                    th:text="${buyer.getName()}"><span
-                    th:text="${buyer.getPhone()}"></span>  </span></a></td>
+        <tr th:each="seller : ${sellers}">
+            <td><a th:href="'/seller?sellerId=' + ${seller.getId()}"><span
+                    th:text="${seller.getName()}"><span
+                    th:text="${seller.getPhone()}"></span>  </span></a></td>
         </tr>
         </tbody>
     </table>

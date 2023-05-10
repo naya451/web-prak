@@ -66,22 +66,26 @@ public class BuyerController {
         return "editBuyer";
     }
 
-    /*@PostMapping("/saveBuyer")
+    @PostMapping("/saveBuyer")
     public String saveBuyerPage(@RequestParam(name = "buyerId") Long buyerId,
-                                 @RequestParam(name = "name") String name,
-                                 Model model) {
-        Buyer buyer = buyerDAO.getById(buyerId);
+                                @RequestParam(name = "name") String name,
+                                @RequestParam(name = "phone", required = false) String phone,
+                                @RequestParam(name = "email", required = false) String email,
+                                @RequestParam(name = "address", required = false) String address,
+                                @RequestParam(name = "info", required = false) String info,
+                                Model model) {
+        Buyers buyer = buyersDAO.getById(buyerId);
         boolean changeIsSuccessful = false;
 
         if (buyer != null) {
             buyer.setName(name);
         } else {
-            buyer = new Buyer(buyerId, name, gender, birthDate, deathDate, info);
+            buyer = new Buyers(buyerId, name, phone, email, address, info);
         }
 
         model.addAttribute("error_msg", "Данные не сохранены");
         return "errorPage";
-    }*/
+    }
 
     @PostMapping("/removeBuyer")
     public String removeBuyerPage(@RequestParam(name = "buyerId") Long buyerId) {

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Редактировать товар</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        .indent {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div th:replace="general :: page-header"> </div>
+
+<div class="indent">
+    <form method="post" action="/saveGood">
+
+        <label for="goodName">Имя:               </label>
+        <input type="text" id="goodName" name="goodName" required th:value="${good.getName()}"><br><br>
+
+        <label for="goodDescription">Описание:          </label>
+        <input type="text" id="goodDescription" name="goodDescription" required th:value="${good.getDescription()}"><br><br>
+
+        <label for="goodType">Тип:           </label>
+        <input type="text" id="goodType" name="goodType" required th:value="${good.getType()}"><br><br>
+
+        <label for="goodSize1">Size1: </label>
+        <input type="text" id="goodSize1" name="goodSize1" required th:value="${good.getSize1()}"><br><br>
+
+        <label for="goodSize2">Size2: </label>
+        <input type="text" id="goodSize2" name="goodSize2" required th:value="${good.getSize2()}"><br><br>
+
+        <label for="goodSize3">Size3: </label>
+        <input type="text" id="goodSize3" name="goodSize3" required th:value="${good.getSize3()}"><br><br>
+
+        <label for="goodMeasurement">Единицы измерения:             </label>
+        <input type="text" id="goodMeasurement" name="goodMeasurement" required th:value="${good.getMeasurement()}"><br><br>
+
+        <label for="goodTime">Срок хранения:             </label>
+        <input type="text" id="goodTime" name="goodTime" required th:value="${good.getTime_of_keeping()()}"><br><br>
+        
+        <input id="submitButton" type="submit" value="Сохранить" class="btn btn-primary">
+    </form>
+</div>
+
+<div th:replace="general :: site-footer"></div>
+<div th:replace="general :: site-script"></div>
+
+</body>
+</html>

@@ -18,31 +18,28 @@
 <div th:replace="general :: page-header"> </div>
 
 <div class="indent">
-    <div id="buyerInfo">
-        <h4 th:text="${buyer.getName()}"></h4>
-        <p th:if="${buyer.getName() != null}" th:text="'Имя: ' + ${buyer.getName()}"></p>
-        <p th:if="${buyer.getPhone() != null}" th:text="'Телефон: ' + ${buyer.getPhone()}"></p>
-        <p th:if="${buyer.getEmail() != null}" th:text="'Электронная почта: ' + ${buyer.getEmail()}"></p>
-        <p th:if="${buyer.getAddress() != null}" th:text="'Адрес: ' + ${buyer.getAddress()}"></p>
-        <p th:if="${buyer.getDescription() != null}" th:text="'Описание: ' + ${buyer.getDescription()()}"></p>
-
-        <p> Последние заказы:&nbsp <span th:if="${deliveriesService.getAllDeliveriesByBuyerLimit5(buyer.getId()) == null}">нет</span>
-            <a th:each="delivery, iter: ${deliveriesService.getAllDeliveriesByBuyerLimit5(buyer.getId())}" th:href="'/delivery?deliveryId=' + ${delivery.getId()}">
-                <span th:text="${delivery.getDate_time()} + ${!iter.last ? ',' : ''}"></span>
-            </a>
-        </p>
-
+    <div id="goodInfo">
+        <h4 th:text="${good.getName()}"></h4>
+        <p th:if="${good.getName() != null}" th:text="'Имя: ' + ${good.getName()}"></p>
+        <p th:if="${good.getType() != null}" th:text="'Тип: ' + ${good.getType()}"></p>
+        <p th:if="${good.getSize1() != null}" th:text="'size1: ' + ${good.getSize1()}"></p>
+        <p th:if="${good.getSize2() != null}" th:text="'size2: ' + ${good.getSize2()}"></p>
+        <p th:if="${good.getSize3() != null}" th:text="'size3: ' + ${good.getSize3()}"></p>
+        <p th:if="${good.getMeasurement() != null}" th:text="'Единицы измерения: ' + ${good.getMeasurement()}"></p>
+        <p th:if="${good.getTime_of_keeping() != null}" th:text="'Срок хранения: ' + ${good.getTime_of_keeping()} + ' дней'"></p>
+        <p th:if="${good.getDescription() != null}" th:text="'Описание: ' + ${good.getEmail()}"></p>
+         <p th:if="${wcService.getPlaces().length() != 0}" th:text="'В наличии: ' + ${wcService.getPlaces().length()} + ' шт.'"></p>
     </div>
 
     <!--edit delete order button group-->
     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group mr-2" role="group" aria-label="First group">
-            <form style="margin-right: 30px" method="get" action="/editBuyer">
-                <input type="hidden" name="buyerId" th:value="${buyer.getId()}"/>
+            <form style="margin-right: 30px" method="get" action="/editGood">
+                <input type="hidden" name="goodId" th:value="${good.getId()}"/>
                 <button id="editButton" type="submit" class="btn btn-secondary">Редактировать информацию о заказчике</button>
             </form>
-            <form method="post" action="/removeBuyer">
-                <input type="hidden" name="buyerId" th:value="${buyer.getId()}"/>
+            <form method="post" action="/removeGood">
+                <input type="hidden" name="goodId" th:value="${good.getId()}"/>
                 <button id="deleteButton" type="submit" class="btn btn-secondary">Удалить заказчика из базы</button>
             </form>
         </div>

@@ -18,30 +18,32 @@
 
 <div class="indent">
     <form method="post" action="/saveGood">
+        <label for="goodId">ID:               </label>
+        <input type="text" id="goodId" name="goodId" required th:value="${good.getId()}"><br><br>
 
         <label for="goodName">Имя:               </label>
         <input type="text" id="goodName" name="goodName" required th:value="${good.getName()}"><br><br>
 
         <label for="goodDescription">Описание:          </label>
-        <input type="text" id="goodDescription" name="goodDescription" required th:value="${good.getDescription()}"><br><br>
+        <input type="text" id="goodDescription" name="goodDescription"  th:value="${good.getDescription()}"><br><br>
 
         <label for="goodType">Тип:           </label>
         <input type="text" id="goodType" name="goodType" required th:value="${good.getType()}"><br><br>
 
         <label for="goodSize1">Size1: </label>
-        <input type="text" id="goodSize1" name="goodSize1" required th:value="${good.getSize1()}"><br><br>
+        <input type="text" id="goodSize1" name="goodSize1"  th:value="${good.getSize1()}"><br><br>
 
         <label for="goodSize2">Size2: </label>
-        <input type="text" id="goodSize2" name="goodSize2" required th:value="${good.getSize2()}"><br><br>
+        <input type="text" id="goodSize2" name="goodSize2"  th:value="${good.getSize2()}"><br><br>
 
         <label for="goodSize3">Size3: </label>
-        <input type="text" id="goodSize3" name="goodSize3" required th:value="${good.getSize3()}"><br><br>
+        <input type="text" id="goodSize3" name="goodSize3"  th:value="${good.getSize3()}"><br><br>
 
         <label for="goodMeasurement">Единицы измерения:             </label>
-        <input type="text" id="goodMeasurement" name="goodMeasurement" required th:value="${good.getMeasurement()}"><br><br>
+        <input type="text" id="goodMeasurement" name="goodMeasurement"  th:value="${good.getMeasurement()}"><br><br>
 
         <label for="goodTime">Срок хранения:             </label>
-        <input type="text" id="goodTime" name="goodTime" required th:value="${good.getTime_of_keeping()()}"><br><br>
+        <input type="text" id="goodTime" name="goodTime"  th:value="${good.getTime_of_keeping()}"><br><br>
 
         <input id="submitButton" type="submit" value="Сохранить" class="btn btn-primary">
     </form>

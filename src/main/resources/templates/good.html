@@ -11,7 +11,7 @@
             margin-top: 20px;
         }
     </style>
-    <title>Информация о заказчике</title>
+    <title>Информация о товаре</title>
 </head>
 
 <body>
@@ -21,14 +21,20 @@
     <div id="goodInfo">
         <h4 th:text="${good.getName()}"></h4>
         <p th:if="${good.getName() != null}" th:text="'Имя: ' + ${good.getName()}"></p>
+        <p th:if="${good.getDescription() != null}" th:text="'Описание: ' + ${good.getDescription()}"></p>
         <p th:if="${good.getType() != null}" th:text="'Тип: ' + ${good.getType()}"></p>
-        <p th:if="${good.getSize1() != null}" th:text="'size1: ' + ${good.getSize1()}"></p>
-        <p th:if="${good.getSize2() != null}" th:text="'size2: ' + ${good.getSize2()}"></p>
-        <p th:if="${good.getSize3() != null}" th:text="'size3: ' + ${good.getSize3()}"></p>
-        <p th:if="${good.getMeasurement() != null}" th:text="'Единицы измерения: ' + ${good.getMeasurement()}"></p>
-        <p th:if="${good.getTime_of_keeping() != null}" th:text="'Срок хранения: ' + ${good.getTime_of_keeping()} + ' дней'"></p>
-        <p th:if="${good.getDescription() != null}" th:text="'Описание: ' + ${good.getEmail()}"></p>
-         <p th:if="${wcService.getPlaces().length() != 0}" th:text="'В наличии: ' + ${wcService.getPlaces().length()} + ' шт.'"></p>
+        <p th:if="${good.getSize1() != null}" th:text="'Длина: ' + ${good.getSize1()}"></p>
+        <p th:if="${good.getSize2() != null}" th:text="'Ширина: ' + ${good.getSize2()}"></p>
+        <p th:if="${good.getSize3() != null}" th:text="'Высота: ' + ${good.getSize3()}"></p>
+        <p th:if="${good.getTime_of_keeping() != null}" th:text="'Срок хранения: ' + ${good.getTime_of_keeping()} + ' дн.'"></p>
+        <p th:if="${good.getMeasurement() != null}" th:text="'Единицы изменения: ' + ${good.getMeasurement()}"></p>
+        <p th:if="${wcService.getPlaces(good) != null}" th:text="'В наличии: ' + ${wcService.getPlaces(good).size()} + ' шт.'"></p>
+        <p> Места на складе:&nbsp <span th:if="${wcService.getPlaces(good) == null}">нет</span>
+            <a th:each="place, iter: ${wcService.getPlaces(good)}" th:href="'/place?placeId=' + ${place.getId()}">
+                <span th:text="${place.getRoom()}  + '-' + ${place.getShelf()} + ${!iter.last ? ',' : ''}"></span>
+            </a>
+        </p>
+
     </div>
 
     <!--edit delete order button group-->
@@ -36,11 +42,11 @@
         <div class="btn-group mr-2" role="group" aria-label="First group">
             <form style="margin-right: 30px" method="get" action="/editGood">
                 <input type="hidden" name="goodId" th:value="${good.getId()}"/>
-                <button id="editButton" type="submit" class="btn btn-secondary">Редактировать информацию о заказчике</button>
+                <button id="editButton" type="submit" class="btn btn-secondary">Редактировать информацию о товаре</button>
             </form>
             <form method="post" action="/removeGood">
                 <input type="hidden" name="goodId" th:value="${good.getId()}"/>
-                <button id="deleteButton" type="submit" class="btn btn-secondary">Удалить заказчика из базы</button>
+                <button id="deleteButton" type="submit" class="btn btn-secondary">Удалить товар из базы</button>
             </form>
         </div>
     </div>

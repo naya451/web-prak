@@ -13,6 +13,7 @@ import ru.msu.cmc.webprak.DAO.implementation.Warehouse_conditionDAO_Implementati
 import ru.msu.cmc.webprak.models.Goods;
 
 import java.util.List;
+import java.util.Objects;
 
 @Controller
 public class GoodController {
@@ -23,9 +24,8 @@ public class GoodController {
     @Autowired
     private final Warehouse_conditionDAO wcDAO = new Warehouse_conditionDAO_Implementation();
 
-
     @GetMapping("/goods")
-    public String peopleListPage(Model model) {
+    public String goodsListPage(Model model) {
         List<Goods> goods = (List<Goods>) goodsDAO.getAll();
         model.addAttribute("goods", goods);
         model.addAttribute("goodService", goodsDAO);
@@ -37,7 +37,7 @@ public class GoodController {
         Goods good = goodsDAO.getById(goodId);
 
         if (good == null) {
-            model.addAttribute("error_msg", "В базе нет товара с ID = " + goodId);
+            model.addAttribute("error_msg", "В базе нет заказчика с ID = " + goodId);
             return "errorPage";
         }
 
@@ -69,26 +69,83 @@ public class GoodController {
 
     @PostMapping("/saveGood")
     public String saveGoodPage(@RequestParam(name = "goodId") Long goodId,
-                                @RequestParam(name = "name") String name,
-                                @RequestParam(name = "type") String type,
-                                @RequestParam(name = "size1", required = false) Long size1,
-                                @RequestParam(name = "size2", required = false) Long size2,
-                                @RequestParam(name = "size3", required = false) Long size3,
-                                @RequestParam(name = "time", required = false) Long time,
-                                @RequestParam(name = "description", required = false) String description,
-                                @RequestParam(name = "measurement", required = false) String measurement,
+                               @RequestParam(name = "goodName") String name,
+                               @RequestParam(name = "goodType", required = true) String type,
+                               @RequestParam(name = "goodSize1", required = false) Long size1,
+                               @RequestParam(name = "goodSize2", required = false) Long size2,
+                               @RequestParam(name = "goodSize3", required = false) Long size3,
+                               @RequestParam(name = "goodTime", required = false) Long time,
+                               @RequestParam(name = "goodMeasurement", required = false) String measurement,
+                               @RequestParam(name = "goodDescription", required = false) String info,
                                 Model model) {
         Goods good = goodsDAO.getById(goodId);
+        List<Goods> goods = goodsDAO.getAllGoods();
         boolean changeIsSuccessful = false;
 
         if (good != null) {
             good.setName(name);
+            if (type!= null) {
+                good.setType(type);
+            }
+            if (size1!= null) {
+                good.setSize1(size1);
+            }
+            if (size2!= null) {
+                good.setSize2(size2);
+            }
+            if (size3!= null) {
+                good.setSize3(size3);
+            }
+            if (time!= null) {
+                good.setTime_of_keeping(time);
+            }
+            if (measurement!= null) {
+                good.setMeasurement(measurement);
+            }
+            if (info!= null) {
+                good.setDescription(info);
+            }
+            goodsDAO.update(good);
         } else {
-            good = new Goods(goodId, name, type, size1, size2, size3, time, description, measurement);
+            good = new Goods(goodId, name, type, size1, size2, size3, time, info, measurement);
+            goodsDAO.save(good);
+        }
+        return "index";
+    }
+
+
+    @GetMapping("/searchGood")
+    public String searchEmployee(@RequestParam(required = true) String name,
+                                 @RequestParam(required = false) String sortingId,
+                                 @RequestParam(required = false) String asc,
+                                 Model model) {
+
+        List<Goods> goods;
+        if (sortingId.equals("Имя")) {
+            if (Objects.equals(asc, "по убыванию")) {
+                goods = goodsDAO.getAllGoodsByNameSortedWithNameDESC(name);
+            } else {
+                goods = goodsDAO.getAllGoodsByNameSortedWithNameASC(name);
+            }
+        } else if (sortingId.equals("Срок хранения")) {
+            if (Objects.equals(asc, "по убыванию")) {
+                goods = goodsDAO.getAllGoodsByNameSortedWithTimeOfKeepingDESC(name);
+            } else {
+                goods = goodsDAO.getAllGoodsByNameSortedWithTimeOfKeepingASC(name);
+            }
+        } else if (sortingId.equals("Наличие")) {
+            if (Objects.equals(asc, "по убыванию")) {
+                goods = goodsDAO.getAllGoodsByNameSortedWithAvailabilityDESC(name);
+            } else {
+                goods = goodsDAO.getAllGoodsByNameSortedWithAvailabilityASC(name);
+            }
+        } else {
+            goods = goodsDAO.getAllGoodsByName(name);
         }
 
-        model.addAttribute("error_msg", "Данные не сохранены");
-        return "errorPage";
+        model.addAttribute("goods", goods);
+        model.addAttribute("goodsDAO", goodsDAO);
+        return "goods";
     }
 
     @PostMapping("/removeGood")

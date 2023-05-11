@@ -25,7 +25,7 @@ public class BuyerController {
     private final DeliveriesDAO deliveriesDAO = new DeliveriesDAO_Implementation();
 
     @GetMapping("/buyers")
-    public String peopleListPage(Model model) {
+    public String buyersListPage(Model model) {
         List<Buyers> buyers = (List<Buyers>) buyersDAO.getAll();
         model.addAttribute("buyers", buyers);
         model.addAttribute("buyerService", buyersDAO);

@@ -25,7 +25,7 @@ public class SellerController {
     private final SuppliesDAO suppliesDAO = new SuppliesDAO_Implementation();
 
     @GetMapping("/sellers")
-    public String peopleListPage(Model model) {
+    public String sellersListPage(Model model) {
         List<Sellers> sellers = (List<Sellers>) sellersDAO.getAll();
         model.addAttribute("sellers", sellers);
         model.addAttribute("sellerService", sellersDAO);

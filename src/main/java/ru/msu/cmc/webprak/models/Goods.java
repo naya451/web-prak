@@ -28,7 +28,7 @@ public class Goods implements CommonEntity<Long> {
     @Column(name = "good_size2")
     private Long size2;
     @Column(name = "good_size3")
-    private Long address;
+    private Long size3;
     @Column(name = "time_of_keeping")
     private Long time_of_keeping;
     @Column(name = "good_description")

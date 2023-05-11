@@ -15,32 +15,26 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/SuppliesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/SuppliesDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/DeliveriesDAO_Implementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/DeliveriesDAO_Implementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/SuppliesDAO_Implementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/SuppliesDAO_Implementation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/BuyerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/BuyerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/GoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/GoodController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/SellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/SellerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/buyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/buyer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/buyers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/buyers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/editBuyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/editBuyer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/editSeller.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/editSeller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/seller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/sellers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/sellers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Goods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/editGood.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/editGood.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/general.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/good.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/good.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/goods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SellerController.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/SuppliesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/SuppliesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/implementation/DeliveriesDAO_Implementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/implementation/DeliveriesDAO_Implementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/implementation/SuppliesDAO_Implementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/implementation/SuppliesDAO_Implementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/BuyerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/GoodController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/SellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/buyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/buyer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/buyers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/buyers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/models/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/models/Goods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editBuyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editBuyer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editSeller.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editSeller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/seller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sellers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sellers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editGood.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editGood.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/general.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/good.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/good.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +249,7 @@
       <workItem from="1682406372001" duration="671000" />
       <workItem from="1682407096171" duration="2306000" />
       <workItem from="1682441014375" duration="3453000" />
-      <workItem from="1683741446877" duration="21554000" />
+      <workItem from="1683741446877" duration="24575000" />
     </task>
     <servers />
   </component>

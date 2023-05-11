@@ -5,36 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddbdae99-a92a-4f4b-864d-b8fa3c264fe3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/BuyerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/BuyerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/GoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/GoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/SellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/SellerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Goods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/editGood.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/editGood.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/general.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/good.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/good.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/goods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SellerController.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/BuyerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/GoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/SellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/models/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/models/Goods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editBuyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editBuyer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editGood.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editGood.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/general.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/good.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/good.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +221,7 @@
       <workItem from="1682406372001" duration="671000" />
       <workItem from="1682407096171" duration="2306000" />
       <workItem from="1682441014375" duration="3453000" />
-      <workItem from="1683741446877" duration="24575000" />
+      <workItem from="1683741446877" duration="25387000" />
     </task>
     <servers />
   </component>

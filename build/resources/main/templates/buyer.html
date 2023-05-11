@@ -24,10 +24,10 @@
         <p th:if="${buyer.getPhone() != null}" th:text="'Телефон: ' + ${buyer.getPhone()}"></p>
         <p th:if="${buyer.getEmail() != null}" th:text="'Электронная почта: ' + ${buyer.getEmail()}"></p>
         <p th:if="${buyer.getAddress() != null}" th:text="'Адрес: ' + ${buyer.getAddress()}"></p>
-        <p th:if="${buyer.getDescription() != null}" th:text="'Описание: ' + ${buyer.getDescription()()}"></p>
+        <p th:if="${buyer.getDescription() != null}" th:text="'Описание: ' + ${buyer.getDescription()}"></p>
 
-        <p> Последние заказы:&nbsp <span th:if="${deliveriesService.getAllDeliveriesByBuyerLimit5(buyer.getId()) == null}">нет</span>
-            <a th:each="delivery, iter: ${deliveriesService.getAllDeliveriesByBuyerLimit5(buyer.getId())}" th:href="'/delivery?deliveryId=' + ${delivery.getId()}">
+        <p> Последние заказы:&nbsp <span th:if="${deliveriesService.getAllDeliveriesByBuyerLimit5(buyer.getName()) == null}">нет</span>
+            <a th:each="delivery, iter: ${deliveriesService.getAllDeliveriesByBuyerLimit5(buyer.getName())}" th:href="'/delivery?deliveryId=' + ${delivery.getId()}">
                 <span th:text="${delivery.getDate_time()} + ${!iter.last ? ',' : ''}"></span>
             </a>
         </p>

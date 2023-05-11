@@ -22,4 +22,8 @@ public interface SuppliesDAO extends CommonDAO<Supplies, Long> {
     List<Supplies> getAllSuppliesByPeriodSortedWithSellerNameASC(java.sql.Date start, java.sql.Date end);
 
     List<Supplies> getAllSuppliesByPeriodSortedWithSellerNameDESC(java.sql.Date start, java.sql.Date end);
+
+    public List<Supplies> getIndexSupplies();
+
+    public List<Supplies> getAllSuppliesBySellerLimit5(String seller);
 }

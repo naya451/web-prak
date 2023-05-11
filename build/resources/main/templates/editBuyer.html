@@ -19,20 +19,23 @@
 <div class="indent">
     <form method="post" action="/saveBuyer">
 
+        <label for="buyerName">ID:               </label>
+        <input type="text" id="buyerId" name="buyerId" required th:value="${buyer.getId()}"><br><br>
+
         <label for="buyerName">Имя:               </label>
         <input type="text" id="buyerName" name="buyerName" required th:value="${buyer.getName()}"><br><br>
 
         <label for="buyerDescription">Описание:          </label>
-        <input type="text" id="buyerDescription" name="buyerDescription" required th:value="${buyer.getDescription()}"><br><br>
+        <input type="text" id="buyerDescription" name="buyerDescription" th:value="${buyer.getDescription()}"><br><br>
 
         <label for="buyerPhone">Телефон:           </label>
-        <input type="text" id="buyerPhone" name="buyerPhone" required th:value="${buyer.getPhone()}"><br><br>
+        <input type="text" id="buyerPhone" name="buyerPhone"  th:value="${buyer.getPhone()}"><br><br>
 
         <label for="buyerEmail">Электронная почта: </label>
-        <input type="text" id="buyerEmail" name="buyerEmail" required th:value="${buyer.getEmail()()}"><br><br>
+        <input type="text" id="buyerEmail" name="buyerEmail"  th:value="${buyer.getEmail()}"><br><br>
 
         <label for="buyerAddress">Адрес:             </label>
-        <input type="text" id="buyerAddress" name="buyerAddress" required th:value="${buyer.getAddress()}"><br><br>
+        <input type="text" id="buyerAddress" name="buyerAddress"  th:value="${buyer.getAddress()}"><br><br>
 
         <input id="submitButton" type="submit" value="Сохранить" class="btn btn-primary">
     </form>

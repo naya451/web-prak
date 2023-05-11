@@ -27,8 +27,8 @@ public class DeliveriesDAO_Implementation extends CommonDAOImplementation<Delive
     @Override
     public List<Deliveries> getIndexDeliveries() {
         try (Session session = sessionFactory.openSession()) {
-            Query<Deliveries> query = session.createQuery("FROM Deliveries order by date_time limit 5", Deliveries.class);
-            return query.getResultList().size() == 0 ? null : query.getResultList();
+            Query<Deliveries> query = session.createQuery("FROM Deliveries order by date_time", Deliveries.class);
+            return query.getResultList().size() == 0 ? null : query.getResultList().subList(0, 5);
         }
     }
 
@@ -37,7 +37,7 @@ public class DeliveriesDAO_Implementation extends CommonDAOImplementation<Delive
         try (Session session = sessionFactory.openSession()) {
             Query<Deliveries> query = session.createQuery("FROM Deliveries " +
                             "WHERE buyer_name LIKE :name", Deliveries.class)
-                    .setParameter("name", buyer);
+                    .setParameter("name", likeExpr(buyer));
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
     }
@@ -45,9 +45,9 @@ public class DeliveriesDAO_Implementation extends CommonDAOImplementation<Delive
     public List<Deliveries> getAllDeliveriesByBuyerLimit5(String buyer) {
         try (Session session = sessionFactory.openSession()) {
             Query<Deliveries> query = session.createQuery("FROM Deliveries " +
-                            "WHERE buyer_name LIKE :name LIMIT 5", Deliveries.class)
-                    .setParameter("name", buyer);
-            return query.getResultList().size() == 0 ? null : query.getResultList();
+                            "WHERE buyer_name LIKE :name", Deliveries.class)
+                    .setParameter("name", likeExpr(buyer));
+            return query.getResultList().size() == 0 ? null : ((query.getResultList().size() < 5) ? query.getResultList() : query.getResultList().subList(0, 5));
         }
     }
 
@@ -119,5 +119,8 @@ public class DeliveriesDAO_Implementation extends CommonDAOImplementation<Delive
                     .setParameter("end", end).setParameter("start", start);
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
+    }
+    private String likeExpr(String param) {
+        return "%" + param + "%";
     }
 }

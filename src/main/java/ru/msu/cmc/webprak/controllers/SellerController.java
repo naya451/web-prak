@@ -13,6 +13,7 @@ import ru.msu.cmc.webprak.DAO.implementation.SuppliesDAO_Implementation;
 import ru.msu.cmc.webprak.models.Sellers;
 
 import java.util.List;
+import java.util.Objects;
 
 @Controller
 public class SellerController {
@@ -36,7 +37,7 @@ public class SellerController {
         Sellers seller = sellersDAO.getById(sellerId);
 
         if (seller == null) {
-            model.addAttribute("error_msg", "В базе нет заказчика с ID = " + sellerId);
+            model.addAttribute("error_msg", "В базе нет поставщика с ID = " + sellerId);
             return "errorPage";
         }
 
@@ -57,7 +58,7 @@ public class SellerController {
         Sellers seller = sellersDAO.getById(sellerId);
 
         if (seller == null) {
-            model.addAttribute("error_msg", "В базе нет человека с ID = " + sellerId);
+            model.addAttribute("error_msg", "В базе нет поставщика с ID = " + sellerId);
             return "errorPage";
         }
 
@@ -68,23 +69,71 @@ public class SellerController {
 
     @PostMapping("/saveSeller")
     public String saveSellerPage(@RequestParam(name = "sellerId") Long sellerId,
-                                @RequestParam(name = "name") String name,
-                                @RequestParam(name = "phone", required = false) String phone,
-                                @RequestParam(name = "email", required = false) String email,
-                                @RequestParam(name = "address", required = false) String address,
-                                @RequestParam(name = "info", required = false) String info,
+                                @RequestParam(name = "sellerName") String name,
+                                @RequestParam(name = "sellerPhone", required = false) String phone,
+                                @RequestParam(name = "sellerEmail", required = false) String email,
+                                @RequestParam(name = "sellerAddress", required = false) String address,
+                                @RequestParam(name = "sellerDescription", required = false) String info,
                                 Model model) {
         Sellers seller = sellersDAO.getById(sellerId);
+        List<Sellers> sellers = sellersDAO.getAllSellers();
         boolean changeIsSuccessful = false;
 
         if (seller != null) {
             seller.setName(name);
+            if (phone!= null) {
+                seller.setPhone(phone);
+            }
+            if (email!= null) {
+                seller.setEmail(email);
+            }
+            if (address!= null) {
+                seller.setAddress(address);
+            }
+            if (info!= null) {
+                seller.setDescription(info);
+            }
+            sellersDAO.update(seller);
         } else {
             seller = new Sellers(sellerId, name, phone, email, address, info);
+            sellersDAO.save(seller);
+        }
+        return "index";
+    }
+
+
+    @GetMapping("/searchSeller")
+    public String searchEmployee(@RequestParam(required = true) String name,
+                                 @RequestParam(required = false) String sortingId,
+                                 @RequestParam(required = false) String asc,
+                                 Model model) {
+
+        List<Sellers> sellers;
+        if (sortingId.equals("Имя")) {
+                if (Objects.equals(asc, "по убыванию")) {
+                    sellers = sellersDAO.getAllSellersByNameSortedWithNameDESC(name);
+                } else {
+                    sellers = sellersDAO.getAllSellersByNameSortedWithNameASC(name);
+                }
+        } else if (sortingId.equals("Количество поставок за последний год")) {
+                if (Objects.equals(asc, "по убыванию")) {
+                    sellers = sellersDAO.getAllSellersByNameSortedWithYearsSuppliesDESC(name);
+                } else {
+                    sellers = sellersDAO.getAllSellersByNameSortedWithYearsSuppliesASC(name);
+                }
+        } else if (sortingId.equals("Общее количество поставок")) {
+                if (Objects.equals(asc, "по убыванию")) {
+                    sellers = sellersDAO.getAllSellersByNameSortedWithSuppliesDESC(name);
+                } else {
+                    sellers = sellersDAO.getAllSellersByNameSortedWithSuppliesASC(name);
+                }
+        } else {
+                sellers = sellersDAO.getAllSellersByName(name);
         }
 
-        model.addAttribute("error_msg", "Данные не сохранены");
-        return "errorPage";
+        model.addAttribute("sellers", sellers);
+        model.addAttribute("sellersDAO", sellersDAO);
+        return "sellers";
     }
 
     @PostMapping("/removeSeller")

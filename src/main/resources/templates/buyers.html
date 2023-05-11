@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <title>Поставщики</title>
+    <title>Покупатели</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -19,7 +19,35 @@
 
 <div class="indent">
     <form method="get" action="/editBuyer">
-        <button id="addBuyerButton" type="submit" class="btn btn-primary">Добавить поставщика</button>
+        <button id="addBuyerButton" type="submit" class="btn btn-primary">Добавить покупателя</button>
+    </form>
+
+    <br>
+
+    <form method="get" action="/searchBuyer">
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Имя" name="name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Сортировка" name="sortingId" list="sorts" />
+                <datalist id="sorts">
+                    <option value="Имя" />
+                    <option value="Количество поставок за последний год" />
+                    <option value="Общее количество поставок" />
+                </datalist>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Порядок" name="asc" list="asc" />
+                <datalist id="asc">
+                    <option value="по возрастанию" />
+                    <option value="по убыванию" />
+                </datalist>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Поиск</button>
+            </div>
+        </div>
     </form>
 
     <br>
@@ -27,18 +55,22 @@
     <table class="table table-bordered table-warning">
         <thead class="thead-dark">
         <tr>
-            <th scope="col">Название</th>
+            <th scope="col">Имя</th>
             <th scope="col">Телефон</th>
+            <th scope="col">Электронная почта</th>
         </tr>
         </thead>
         <tbody>
         <tr th:if="${buyers.isEmpty()}">
-            <td colspan="6"> В базе пока нет ни одного поставщика. <a href="/editBuyer">Необходимо добавить</a></td>
+            <td colspan="3"> В базе пока нет ни одного покупателя. <a href="/editBuyer">Необходимо добавить</a></td>
         </tr>
         <tr th:each="buyer : ${buyers}">
             <td><a th:href="'/buyer?buyerId=' + ${buyer.getId()}"><span
-                    th:text="${buyer.getName()}"><span
-                    th:text="${buyer.getPhone()}"></span>  </span></a></td>
+                    th:text="${buyer.getName()}"></span></a></td>
+            <td><span
+                    th:text="${buyer.getPhone()}"></span></td>
+            <td><span
+                    th:text="${buyer.getEmail()}"></span></td>
         </tr>
         </tbody>
     </table>

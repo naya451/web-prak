@@ -21,7 +21,7 @@
     <h1> Складской учет</h1>
     <div th:replace="general :: site-footer"></div>
 </div>
-<br>
+<div class="indent">
 <form method="get" action="/editGood">
     <button id="addGoodButton" type="submit" class="btn btn-primary">Добавить товар</button>
 </form>
@@ -33,7 +33,7 @@
 <form method="get" action="/editSeller">
     <button id="addSellerButton" type="submit" class="btn btn-primary">Добавить поставщика</button>
 </form>
-<br>
+</div>
 
 <div th:replace="general :: site-script"></div>
 

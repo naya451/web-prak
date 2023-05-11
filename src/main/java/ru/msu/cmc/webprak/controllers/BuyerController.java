@@ -13,6 +13,7 @@ import ru.msu.cmc.webprak.DAO.implementation.DeliveriesDAO_Implementation;
 import ru.msu.cmc.webprak.models.Buyers;
 
 import java.util.List;
+import java.util.Objects;
 
 @Controller
 public class BuyerController {
@@ -68,23 +69,71 @@ public class BuyerController {
 
     @PostMapping("/saveBuyer")
     public String saveBuyerPage(@RequestParam(name = "buyerId") Long buyerId,
-                                @RequestParam(name = "name") String name,
-                                @RequestParam(name = "phone", required = false) String phone,
-                                @RequestParam(name = "email", required = false) String email,
-                                @RequestParam(name = "address", required = false) String address,
-                                @RequestParam(name = "info", required = false) String info,
+                                @RequestParam(name = "buyerName") String name,
+                                @RequestParam(name = "buyerPhone", required = false) String phone,
+                                @RequestParam(name = "buyerEmail", required = false) String email,
+                                @RequestParam(name = "buyerAddress", required = false) String address,
+                                @RequestParam(name = "buyerDescription", required = false) String info,
                                 Model model) {
         Buyers buyer = buyersDAO.getById(buyerId);
+        List<Buyers> buyers = buyersDAO.getAllBuyers();
         boolean changeIsSuccessful = false;
 
         if (buyer != null) {
             buyer.setName(name);
+            if (phone!= null) {
+                buyer.setPhone(phone);
+            }
+            if (email!= null) {
+                buyer.setEmail(email);
+            }
+            if (address!= null) {
+                buyer.setAddress(address);
+            }
+            if (info!= null) {
+                buyer.setDescription(info);
+            }
+            buyersDAO.update(buyer);
         } else {
             buyer = new Buyers(buyerId, name, phone, email, address, info);
+            buyersDAO.save(buyer);
+        }
+        return "index";
+    }
+
+
+    @GetMapping("/searchBuyer")
+    public String searchEmployee(@RequestParam(required = true) String name,
+                                 @RequestParam(required = false) String sortingId,
+                                 @RequestParam(required = false) String asc,
+                                 Model model) {
+
+        List<Buyers> buyers;
+        if (sortingId.equals("Имя")) {
+                if (Objects.equals(asc, "по убыванию")) {
+                    buyers = buyersDAO.getAllBuyersByNameSortedWithNameDESC(name);
+                } else {
+                    buyers = buyersDAO.getAllBuyersByNameSortedWithNameASC(name);
+                }
+        } else if (sortingId.equals("Количество поставок за последний год")) {
+                if (Objects.equals(asc, "по убыванию")) {
+                    buyers = buyersDAO.getAllBuyersByNameSortedWithYearsDeliveriesDESC(name);
+                } else {
+                    buyers = buyersDAO.getAllBuyersByNameSortedWithYearsDeliveriesASC(name);
+                }
+        } else if (sortingId.equals("Общее количество поставок")) {
+                if (Objects.equals(asc, "по убыванию")) {
+                    buyers = buyersDAO.getAllBuyersByNameSortedWithDeliveriesDESC(name);
+                } else {
+                    buyers = buyersDAO.getAllBuyersByNameSortedWithDeliveriesASC(name);
+                }
+        } else {
+                buyers = buyersDAO.getAllBuyersByName(name);
         }
 
-        model.addAttribute("error_msg", "Данные не сохранены");
-        return "errorPage";
+        model.addAttribute("buyers", buyers);
+        model.addAttribute("buyersDAO", buyersDAO);
+        return "buyers";
     }
 
     @PostMapping("/removeBuyer")

@@ -34,6 +34,24 @@ public class SuppliesDAO_Implementation extends CommonDAOImplementation<Supplies
         }
     }
 
+
+    @Override
+    public List<Supplies> getIndexSupplies() {
+        try (Session session = sessionFactory.openSession()) {
+            Query<Supplies> query = session.createQuery("FROM Supplies order by date_time", Supplies.class);
+            return query.getResultList().size() == 0 ? null : query.getResultList().subList(0, 5);
+        }
+    }
+
+    @Override
+    public List<Supplies> getAllSuppliesBySellerLimit5(String seller) {
+        try (Session session = sessionFactory.openSession()) {
+            Query<Supplies> query = session.createQuery("FROM Supplies " +
+                            "WHERE seller_name LIKE :name", Supplies.class)
+                    .setParameter("name", likeExpr(seller));
+            return query.getResultList().size() == 0 ? null : ((query.getResultList().size() < 5) ? query.getResultList() : query.getResultList().subList(0, 5));
+        }
+    }
     @Override
     public List<Supplies> getAllSuppliesByPeriod(Date start, Date end) {
         try (Session session = sessionFactory.openSession()) {
@@ -102,5 +120,8 @@ public class SuppliesDAO_Implementation extends CommonDAOImplementation<Supplies
                     .setParameter("end", end).setParameter("start", start);
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
+    }
+    private String likeExpr(String param) {
+        return "%" + param + "%";
     }
 }

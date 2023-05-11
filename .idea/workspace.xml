@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ddbdae99-a92a-4f4b-864d-b8fa3c264fe3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -15,192 +14,33 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/webprak.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/BuyersDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/CommonDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/DeliveriesDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/GoodsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/Goods_in_deliveryDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/Goods_in_supplyDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/SellersDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/SuppliesDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/Warehouse_conditionDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/BuyersDAO_Implementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/CommonDAOImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/DeliveriesDAO_Implementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/GoodsDAO_Implementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/Goods_in_deliveryDAO_Implementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/Goods_in_supplyDAO_Implementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/SellersDAO_Implementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/SuppliesDAO_Implementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/Warehouse_conditionDAO_Implementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/WebprakApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/configs/HibernateDatabaseConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/configs/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/BuyerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Buyers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/CommonEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Deliveries.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Goods.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Goods_in_delivery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Goods_in_supply.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Sellers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Supplies.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/models/Warehouse_condition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/msu/cmc/webprak/DAO/BuyersDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/msu/cmc/webprak/DAO/DeliveriesDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/msu/cmc/webprak/DAO/GoodsDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/msu/cmc/webprak/DAO/Goods_in_deliveryDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/msu/cmc/webprak/DAO/Goods_in_supplyDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/msu/cmc/webprak/DAO/SellersDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/msu/cmc/webprak/DAO/SuppliesDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/msu/cmc/webprak/DAO/Warehouse_conditionDAOTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/msu/cmc/webprak/HibernateDatabaseConfigTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/msu/cmc/webprak/WebprakApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/ru.msu.cmc.webprak.DAO.BuyersDAOTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/ru.msu.cmc.webprak.DAO.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/sql/create.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/sql/insert.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/sql/triggers.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/buyer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-ru.msu.cmc.webprak.DAO.BuyersDAOTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BuyersDAO_Implementation.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommonDAOImplementation.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DeliveriesDAO_Implementation.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GoodsDAO_Implementation.class.uniqueId8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Goods_in_deliveryDAO_Implementation.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Goods_in_supplyDAO_Implementation.class.uniqueId6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SellersDAO_Implementation.class.uniqueId5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SuppliesDAO_Implementation.class.uniqueId7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Warehouse_conditionDAO_Implementation.class.uniqueId3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/BuyersDAOTest.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/css/coverage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/css/idea.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/img/arrowDown.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/img/arrowUp.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/js/highlight.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/js/highlightjs-line-numbers.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-1/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-2/sources/source-9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-3/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/sources/source-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/sources/source-5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/sources/source-6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/sources/source-7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/sources/source-8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-4/sources/source-9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/sources/source-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/sources/source-5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/sources/source-6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/sources/source-7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/sources/source-8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlReport/ns-5/sources/source-9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/DeliveriesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/DeliveriesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/SuppliesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/SuppliesDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/DeliveriesDAO_Implementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/DeliveriesDAO_Implementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/SuppliesDAO_Implementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/SuppliesDAO_Implementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/BuyerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/BuyerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/SellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/SellerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/buyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/buyer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/buyers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/buyers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/editBuyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/editBuyer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/editSeller.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/editSeller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/seller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/sellers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/sellers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/SuppliesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/SuppliesDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/implementation/DeliveriesDAO_Implementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/implementation/DeliveriesDAO_Implementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/configs/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/configs/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editGood.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editGood.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/general.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/implementation/SuppliesDAO_Implementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/implementation/SuppliesDAO_Implementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/BuyerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/SellerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/buyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/buyer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/buyers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/buyers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editBuyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editBuyer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editSeller.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editSeller.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/seller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sellers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sellers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,6 +147,12 @@
       <data-source id="4c54a873-e945-447f-9a5f-3b859dcc1dc6" />
       <method v="2" />
     </configuration>
+    <configuration name="insert.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/sql/insert.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="4c54a873-e945-447f-9a5f-3b859dcc1dc6" />
+      <method v="2" />
+    </configuration>
     <configuration name="triggers.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/sql/triggers.sql" />
       <script-mode>FILE</script-mode>
@@ -361,30 +207,6 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="Warehouse_conditionDAOTest.testSimpleManipulations" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.msu.cmc.webprak.DAO.Warehouse_conditionDAOTest.testSimpleManipulations&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <configuration name="WebprakApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="webprak.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.msu.cmc.webprak.WebprakApplication" />
@@ -394,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BuyersDAOTest.testCommon" />
-        <item itemvalue="Database Script.create.sql" />
+        <item itemvalue="Database Script.insert.sql" />
         <item itemvalue="Database Script.triggers.sql" />
+        <item itemvalue="Database Script.create.sql" />
+        <item itemvalue="Gradle.BuyersDAOTest.testCommon" />
         <item itemvalue="Gradle.GoodsDAOTest.testCommon" />
-        <item itemvalue="Gradle.Warehouse_conditionDAOTest.testSimpleManipulations" />
       </list>
     </recent_temporary>
   </component>
@@ -433,7 +255,7 @@
       <workItem from="1682406372001" duration="671000" />
       <workItem from="1682407096171" duration="2306000" />
       <workItem from="1682441014375" duration="3453000" />
-      <workItem from="1683741446877" duration="12820000" />
+      <workItem from="1683741446877" duration="21554000" />
     </task>
     <servers />
   </component>

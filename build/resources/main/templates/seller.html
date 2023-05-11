@@ -24,9 +24,10 @@
         <p th:if="${seller.getPhone() != null}" th:text="'Телефон: ' + ${seller.getPhone()}"></p>
         <p th:if="${seller.getEmail() != null}" th:text="'Электронная почта: ' + ${seller.getEmail()}"></p>
         <p th:if="${seller.getAddress() != null}" th:text="'Адрес: ' + ${seller.getAddress()}"></p>
-        <p th:if="${seller.getDescription() != null}" th:text="'Описание: ' + ${seller.getDescription()()}"></p>
-        <p> Последние поставки:&nbsp <span th:if="${suppliesService.getAllSuppliesBySellerLimit5(seller.getId()) == null}">нет</span>
-            <a th:each="supply, iter: ${suppliesService.getAllSuppliesBySellerLimit5(seller.getId())}" th:href="'/supply?supplyId=' + ${supply.getId()}">
+        <p th:if="${seller.getDescription() != null}" th:text="'Описание: ' + ${seller.getDescription()}"></p>
+
+        <p> Последние заказы:&nbsp <span th:if="${suppliesService.getAllSuppliesBySellerLimit5(seller.getName()) == null}">нет</span>
+            <a th:each="supply, iter: ${suppliesService.getAllSuppliesBySellerLimit5(seller.getName())}" th:href="'/supply?supplyId=' + ${supply.getId()}">
                 <span th:text="${supply.getDate_time()} + ${!iter.last ? ',' : ''}"></span>
             </a>
         </p>

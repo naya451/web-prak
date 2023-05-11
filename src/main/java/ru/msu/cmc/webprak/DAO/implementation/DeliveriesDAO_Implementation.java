@@ -25,6 +25,14 @@ public class DeliveriesDAO_Implementation extends CommonDAOImplementation<Delive
     }
 
     @Override
+    public List<Deliveries> getIndexDeliveries() {
+        try (Session session = sessionFactory.openSession()) {
+            Query<Deliveries> query = session.createQuery("FROM Deliveries order by date_time limit 5", Deliveries.class);
+            return query.getResultList().size() == 0 ? null : query.getResultList();
+        }
+    }
+
+    @Override
     public List<Deliveries> getAllDeliveriesByBuyer(String buyer) {
         try (Session session = sessionFactory.openSession()) {
             Query<Deliveries> query = session.createQuery("FROM Deliveries " +

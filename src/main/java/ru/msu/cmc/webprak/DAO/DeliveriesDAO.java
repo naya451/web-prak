@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface DeliveriesDAO extends CommonDAO<Deliveries, Long> {
     List<Deliveries> getAllDeliveries();
+    List<Deliveries> getIndexDeliveries();
 
     List<Deliveries> getAllDeliveriesByBuyer(String id);
 

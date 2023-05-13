@@ -25,7 +25,7 @@ public class Warehouse_conditionDAOTest {
 
     @Test
     void testSimpleManipulations() {
-        List<Warehouse_condition> PlacesByType = Warehouse_conditionDAO.getGetFreePositionsByType("smth");
+        List<Warehouse_condition> PlacesByType = Warehouse_conditionDAO.getGetNotFreePositionsByType("smth");
         assertNull(PlacesByType);
         List<Warehouse_condition> PlacesForGood = (List<Warehouse_condition>) Warehouse_conditionDAO.getPlaces(goodsDAO.getById(2L));
         assertEquals(2, PlacesForGood.size());

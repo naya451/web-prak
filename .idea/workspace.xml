@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddbdae99-a92a-4f4b-864d-b8fa3c264fe3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/SupplyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editSupply.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/supplies.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/supply.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/WarehouseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/wcFail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/wcLookup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/wcMain.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/wcSuccess.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
@@ -18,16 +19,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/DeliveryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/controllers/DeliveryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/delivery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/editDelivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/editDelivery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/Warehouse_conditionDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/Warehouse_conditionDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/Warehouse_conditionDAO_Implementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/msu/cmc/webprak/DAO/implementation/Warehouse_conditionDAO_Implementation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/general.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DeliveryController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DeliveryController.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SupplyController.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/controllers/DeliveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/delivery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editDelivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editDelivery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/Warehouse_conditionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/Warehouse_conditionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/implementation/Warehouse_conditionDAO_Implementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/DAO/implementation/Warehouse_conditionDAO_Implementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/models/Warehouse_condition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/msu/cmc/webprak/models/Warehouse_condition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/general.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/msu/cmc/webprak/DAO/Warehouse_conditionDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/msu/cmc/webprak/DAO/Warehouse_conditionDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +110,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/anastasia/test",
+    "last_opened_file_path": "/home/anastasia/web-prak/src/main/resources/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,6 +131,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.msu.cmc.webprak.controllers" />
     </key>
@@ -247,7 +254,7 @@
       <workItem from="1682407096171" duration="2306000" />
       <workItem from="1682441014375" duration="3453000" />
       <workItem from="1683741446877" duration="27916000" />
-      <workItem from="1683886987419" duration="10752000" />
+      <workItem from="1683886987419" duration="17558000" />
     </task>
     <servers />
   </component>

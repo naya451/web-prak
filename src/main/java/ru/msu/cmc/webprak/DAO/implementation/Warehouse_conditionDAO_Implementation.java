@@ -17,12 +17,12 @@ public class Warehouse_conditionDAO_Implementation extends CommonDAOImplementati
     }
 
     @Override
-    public List<Warehouse_condition> getGetFreePositionsByType(String type) {
+    public List<Warehouse_condition> getGetNotFreePositionsByType(String gtype) {
         try (Session session = sessionFactory.openSession()) {
             Query<Warehouse_condition> query = session.createQuery("FROM Warehouse_condition " +
-                            " WHERE (availability = true) AND (type LIKE :type) ", Warehouse_condition.class)
-                                    .setParameter("type", type);
-            return query.getResultList().size() == 0 ? null : query.getResultList();
+                            " WHERE ((availability = false) and (gtype Like :gtype))", Warehouse_condition.class)
+                                    .setParameter("gtype", likeExpr(gtype));
+            return query.getResultList();
         }
     }
     @Override
@@ -33,5 +33,8 @@ public class Warehouse_conditionDAO_Implementation extends CommonDAOImplementati
                     .setParameter("id", id);
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }
+    }
+    private String likeExpr(String param) {
+        return "%" + param + "%";
     }
 }

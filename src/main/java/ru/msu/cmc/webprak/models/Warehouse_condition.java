@@ -22,8 +22,8 @@ public class Warehouse_condition implements CommonEntity<Long> {
     @Column(nullable = false, name = "shelf_id")
     @NonNull
     private Long shelf;
-    @Column(name = "good_type")
-    private String type;
+    @Column(name = "goods_type")
+    private String gtype;
     @Column(name = "shelf_availability")
     private boolean availability;
     @ManyToOne(fetch = FetchType.EAGER)

@@ -28,16 +28,16 @@ public class DeliveriesDAOTest {
         assertEquals(11, list_of_deliveries2.size());
         List<Deliveries> all_buyers_deliveries= deliveriesDAO.getAllDeliveriesByBuyer("Mike Smith");
         assertEquals(5, all_buyers_deliveries.size());
-        java.sql.Date tmp1 = new java.sql.Date(114, 00, 01);
-        java.sql.Date tmp2 = new java.sql.Date(115, 00, 01);
+        java.util.Date tmp1 = new java.util.Date(114, 00, 01);
+        java.util.Date tmp2 = new java.util.Date(115, 00, 01);
         List<Deliveries> deliveriesin2014 = deliveriesDAO.getAllDeliveriesByPeriod(tmp1, tmp2);
         assertEquals(4, deliveriesin2014.size());
     }
 
     @Test
     void testSortings() {
-        java.sql.Date tmp1 = new java.sql.Date(114, 00, 01);
-        java.sql.Date tmp2 = new java.sql.Date(115, 00, 01);
+        java.util.Date tmp1 = new java.util.Date(114, 00, 01);
+        java.util.Date tmp2 = new java.util.Date(115, 00, 01);
         List<Deliveries> deliveriesin2014sorted = deliveriesDAO.getAllDeliveriesByPeriodSortedWithDateASC(tmp1, tmp2);
         assertEquals(4, deliveriesin2014sorted.size());
         assertEquals(7, deliveriesin2014sorted.get(0).getId());

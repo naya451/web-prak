@@ -20,11 +20,10 @@
 <div class="indent">
     <div id="sellerInfo">
         <h4 th:text="${seller.getName()}"></h4>
-        <p th:if="${seller.getName() != null}" th:text="'Имя: ' + ${seller.getName()}"></p>
-        <p th:if="${seller.getPhone() != null}" th:text="'Телефон: ' + ${seller.getPhone()}"></p>
-        <p th:if="${seller.getEmail() != null}" th:text="'Электронная почта: ' + ${seller.getEmail()}"></p>
-        <p th:if="${seller.getAddress() != null}" th:text="'Адрес: ' + ${seller.getAddress()}"></p>
-        <p th:if="${seller.getDescription() != null}" th:text="'Описание: ' + ${seller.getDescription()}"></p>
+        <p th:if="${seller.getPhone() != null && seller.getPhone().length() != 0}" th:text="'Телефон: ' + ${seller.getPhone()}"></p>
+        <p th:if="${seller.getEmail() != null && seller.getEmail().length() != 0}" th:text="'Электронная почта: ' + ${seller.getEmail()}"></p>
+        <p th:if="${seller.getAddress() != null && seller.getAddress().length() != 0}" th:text="'Адрес: ' + ${seller.getAddress()}"></p>
+        <p th:if="${seller.getDescription() != null && seller.getDescription().length() != 0}" th:text="'Описание: ' + ${seller.getDescription()}"></p>
 
         <p> Последние заказы:&nbsp <span th:if="${suppliesService.getAllSuppliesBySellerLimit5(seller.getName()) == null}">нет</span>
             <a th:each="supply, iter: ${suppliesService.getAllSuppliesBySellerLimit5(seller.getName())}" th:href="'/supply?supplyId=' + ${supply.getId()}">

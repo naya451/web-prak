@@ -77,7 +77,7 @@ public class GoodController {
                                @RequestParam(name = "goodTime", required = false) Long time,
                                @RequestParam(name = "goodMeasurement", required = false) String measurement,
                                @RequestParam(name = "goodDescription", required = false) String info,
-                                Model model) {
+                               Model model) {
         Goods good = goodsDAO.getById(goodId);
         List<Goods> goods = goodsDAO.getAllGoods();
         boolean changeIsSuccessful = false;

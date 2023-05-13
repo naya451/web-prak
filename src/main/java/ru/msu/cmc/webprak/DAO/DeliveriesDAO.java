@@ -12,17 +12,17 @@ public interface DeliveriesDAO extends CommonDAO<Deliveries, Long> {
 
     List<Deliveries> getAllDeliveriesByBuyerLimit5(String id);
 
-    List<Deliveries> getAllDeliveriesByPeriod(java.sql.Date start, java.sql.Date end);
+    List<Deliveries> getAllDeliveriesByPeriod(java.util.Date start, java.util.Date end);
 
-    List<Deliveries> getAllDeliveriesByPeriodSortedWithDateASC(java.sql.Date start, java.sql.Date end);
+    List<Deliveries> getAllDeliveriesByPeriodSortedWithDateASC(java.util.Date start, java.util.Date end);
 
-    List<Deliveries> getAllDeliveriesByPeriodSortedWithDateDESC(java.sql.Date start, java.sql.Date end);
+    List<Deliveries> getAllDeliveriesByPeriodSortedWithDateDESC(java.util.Date start, java.util.Date end);
 
-    List<Deliveries> getAllDeliveriesByPeriodSortedWithNumberOfGoodsASC(java.sql.Date start, java.sql.Date end);
+    List<Deliveries> getAllDeliveriesByPeriodSortedWithNumberOfGoodsASC(java.util.Date start, java.util.Date end);
 
-    List<Deliveries> getAllDeliveriesByPeriodSortedWithNumberOfGoodsDESC(java.sql.Date start, java.sql.Date end);
+    List<Deliveries> getAllDeliveriesByPeriodSortedWithNumberOfGoodsDESC(java.util.Date start, java.util.Date end);
 
-    List<Deliveries> getAllDeliveriesByPeriodSortedWithBuyerNameASC(java.sql.Date start, java.sql.Date end);
+    List<Deliveries> getAllDeliveriesByPeriodSortedWithBuyerNameASC(java.util.Date start, java.util.Date end);
 
-    List<Deliveries> getAllDeliveriesByPeriodSortedWithBuyerNameDESC(java.sql.Date start, java.sql.Date end);
+    List<Deliveries> getAllDeliveriesByPeriodSortedWithBuyerNameDESC(java.util.Date start, java.util.Date end);
 }

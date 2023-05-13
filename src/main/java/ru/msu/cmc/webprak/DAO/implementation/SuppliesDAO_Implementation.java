@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import ru.msu.cmc.webprak.DAO.SuppliesDAO;
 import ru.msu.cmc.webprak.models.Supplies;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -47,7 +47,7 @@ public class SuppliesDAO_Implementation extends CommonDAOImplementation<Supplies
     public List<Supplies> getAllSuppliesBySellerLimit5(String seller) {
         try (Session session = sessionFactory.openSession()) {
             Query<Supplies> query = session.createQuery("FROM Supplies " +
-                            "WHERE seller_name LIKE :name", Supplies.class)
+                            "WHERE seller_name LIKE :name ORDER BY date_time desc", Supplies.class)
                     .setParameter("name", likeExpr(seller));
             return query.getResultList().size() == 0 ? null : ((query.getResultList().size() < 5) ? query.getResultList() : query.getResultList().subList(0, 5));
         }

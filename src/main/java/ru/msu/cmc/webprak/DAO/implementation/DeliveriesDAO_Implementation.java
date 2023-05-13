@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import ru.msu.cmc.webprak.DAO.DeliveriesDAO;
 import ru.msu.cmc.webprak.models.Deliveries;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -45,7 +45,7 @@ public class DeliveriesDAO_Implementation extends CommonDAOImplementation<Delive
     public List<Deliveries> getAllDeliveriesByBuyerLimit5(String buyer) {
         try (Session session = sessionFactory.openSession()) {
             Query<Deliveries> query = session.createQuery("FROM Deliveries " +
-                            "WHERE buyer_name LIKE :name", Deliveries.class)
+                            "WHERE buyer_name LIKE :name order by date_time desc", Deliveries.class)
                     .setParameter("name", likeExpr(buyer));
             return query.getResultList().size() == 0 ? null : ((query.getResultList().size() < 5) ? query.getResultList() : query.getResultList().subList(0, 5));
         }
@@ -55,7 +55,7 @@ public class DeliveriesDAO_Implementation extends CommonDAOImplementation<Delive
     public List<Deliveries> getAllDeliveriesByPeriod(Date start, Date end) {
         try (Session session = sessionFactory.openSession()) {
             Query<Deliveries> query = session.createQuery("FROM Deliveries " +
-                            "WHERE date_time between :start and :end ", Deliveries.class)
+                            "WHERE (date_time >= :start) and (date_time <= :end) ", Deliveries.class)
                     .setParameter("start", start).setParameter("end", end);
             return query.getResultList().size() == 0 ? null : query.getResultList();
         }

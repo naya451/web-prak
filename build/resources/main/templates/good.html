@@ -20,14 +20,13 @@
 <div class="indent">
     <div id="goodInfo">
         <h4 th:text="${good.getName()}"></h4>
-        <p th:if="${good.getName() != null}" th:text="'Имя: ' + ${good.getName()}"></p>
         <p th:if="${good.getDescription() != null}" th:text="'Описание: ' + ${good.getDescription()}"></p>
-        <p th:if="${good.getType() != null}" th:text="'Тип: ' + ${good.getType()}"></p>
-        <p th:if="${good.getSize1() != null}" th:text="'Длина: ' + ${good.getSize1()}"></p>
-        <p th:if="${good.getSize2() != null}" th:text="'Ширина: ' + ${good.getSize2()}"></p>
-        <p th:if="${good.getSize3() != null}" th:text="'Высота: ' + ${good.getSize3()}"></p>
-        <p th:if="${good.getTime_of_keeping() != null}" th:text="'Срок хранения: ' + ${good.getTime_of_keeping()} + ' дн.'"></p>
-        <p th:if="${good.getMeasurement() != null}" th:text="'Единицы изменения: ' + ${good.getMeasurement()}"></p>
+        <p th:if="${good.getType() != null && good.getType().length() != 0}" th:text="'Тип: ' + ${good.getType()}"></p>
+        <p th:if="${good.getSize1() != null && good.getSize1() != 0}" th:text="'Длина: ' + ${good.getSize1()}"></p>
+        <p th:if="${good.getSize2() != null && good.getSize2() != 0}" th:text="'Ширина: ' + ${good.getSize2()}"></p>
+        <p th:if="${good.getSize3() != null && good.getSize3() != 0}" th:text="'Высота: ' + ${good.getSize3()}"></p>
+        <p th:if="${good.getTime_of_keeping() != null && good.getTime_of_keeping() != 0}" th:text="'Срок хранения: ' + ${good.getTime_of_keeping()} + ' дн.'"></p>
+        <p th:if="${good.getMeasurement() != null && good.getMeasurement().length() != 0}" th:text="'Единицы изменения: ' + ${good.getMeasurement()}"></p>
         <p th:if="${wcService.getPlaces(good) != null}" th:text="'В наличии: ' + ${wcService.getPlaces(good).size()} + ' шт.'"></p>
         <p> Места на складе:&nbsp <span th:if="${wcService.getPlaces(good) == null}">нет</span>
             <a th:each="place, iter: ${wcService.getPlaces(good)}" th:href="'/place?placeId=' + ${place.getId()}">

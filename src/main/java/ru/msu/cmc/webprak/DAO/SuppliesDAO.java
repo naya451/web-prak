@@ -9,19 +9,19 @@ public interface SuppliesDAO extends CommonDAO<Supplies, Long> {
 
     List<Supplies> getAllSuppliesBySeller(String name);
 
-    List<Supplies> getAllSuppliesByPeriod(java.sql.Date start, java.sql.Date end);
+    List<Supplies> getAllSuppliesByPeriod(java.util.Date start, java.util.Date end);
 
-    List<Supplies> getAllSuppliesByPeriodSortedWithDateASC(java.sql.Date start, java.sql.Date end);
+    List<Supplies> getAllSuppliesByPeriodSortedWithDateASC(java.util.Date start, java.util.Date end);
 
-    List<Supplies> getAllSuppliesByPeriodSortedWithDateDESC(java.sql.Date start, java.sql.Date end);
+    List<Supplies> getAllSuppliesByPeriodSortedWithDateDESC(java.util.Date start, java.util.Date end);
 
-    List<Supplies> getAllSuppliesByPeriodSortedWithNumberOfGoodsASC(java.sql.Date start, java.sql.Date end);
+    List<Supplies> getAllSuppliesByPeriodSortedWithNumberOfGoodsASC(java.util.Date start, java.util.Date end);
 
-    List<Supplies> getAllSuppliesByPeriodSortedWithNumberOfGoodsDESC(java.sql.Date start, java.sql.Date end);
+    List<Supplies> getAllSuppliesByPeriodSortedWithNumberOfGoodsDESC(java.util.Date start, java.util.Date end);
 
-    List<Supplies> getAllSuppliesByPeriodSortedWithSellerNameASC(java.sql.Date start, java.sql.Date end);
+    List<Supplies> getAllSuppliesByPeriodSortedWithSellerNameASC(java.util.Date start, java.util.Date end);
 
-    List<Supplies> getAllSuppliesByPeriodSortedWithSellerNameDESC(java.sql.Date start, java.sql.Date end);
+    List<Supplies> getAllSuppliesByPeriodSortedWithSellerNameDESC(java.util.Date start, java.util.Date end);
 
     public List<Supplies> getIndexSupplies();
 

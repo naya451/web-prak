@@ -22,10 +22,9 @@
         <h4 th:text="${delivery.getDate_time()}"></h4>
         <p th:if="${delivery.getBuyer_name() != null && delivery.getBuyer_name().length() != 0}" th:text="'Имя покупателя: ' + ${delivery.getBuyer_name()}"></p>
         <p th:if="${delivery.getComment() != null && delivery.getComment().length() != 0}" th:text="'Комментарий: ' + ${delivery.getComment()}"></p>
-        <p th:if="${goodsService.getAllGoods_in_delivery(delivery) != null}" th:text="'Количество доставляемых товаров: ' + ${goodsService.getAllGoods_in_delivery(delivery).size()}"></p>
         <p> Доставляемые товары:&nbsp <span th:if="${goodsService.getAllGoods_in_delivery(delivery) == null}">Неизвестно</span>
             <a th:each="good, iter: ${goodsService.getAllGoods_in_delivery(delivery)}" th:href="'/good?goodId=' + ${good.getGood().getId()}">
-                <span th:text="${good.getGood().getName()} + ${!iter.last ? ',' : ''}"></span>
+                <span th:text="${good.getGood().getName()} + ' - ' + ${good.getAmount()} + ' шт.' + ${!iter.last ? ',' : ''}"></span>
             </a>
         </p>
     </div>

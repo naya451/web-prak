@@ -25,13 +25,12 @@
         <label for="deliveryDate">Дата:               </label>
         <input type="date" id="deliveryDate" name="deliveryDateTime" required th:value="${delivery.getDate_time()}"><br><br>
 
-        <p th:if="${delivery.getDate_time() != null}" th:text="'Планируемая ранее дата: ' + ${delivery.getDate_time()}"></p><br><br>
-
+        <p th:if="${delivery.getDate_time() != null}" th:text="'Планируемая ранее дата: ' + ${delivery.getDate_time()}"></p><br>
 
         <label for="deliveryBuyerName">Заказчик:          </label>
         <input type="text" id="deliveryBuyerName" name="deliveryBuyerName" required th:value="${delivery.getBuyer_name()}"><br><br>
 
-        <label for="deliveryComment">Телефон:           </label>
+        <label for="deliveryComment">Комментарий:           </label>
         <input type="text" id="deliveryComment" name="deliveryComment"  th:value="${delivery.getComment()}"><br><br>
 
         <input id="submitButton" type="submit" value="Сохранить" class="btn btn-primary">

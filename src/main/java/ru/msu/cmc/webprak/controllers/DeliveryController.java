@@ -80,7 +80,7 @@ public class DeliveryController {
 
     @PostMapping("/saveDelivery")
     public String saveDeliveryPage(@RequestParam(name = "deliveryId") Long deliveryId,
-                                @RequestParam(name = "deliveryDateTime") Date date,
+                                @RequestParam(name = "deliveryDateTime") @DateTimeFormat(pattern = "yyyy-MM-dd") Date date,
                                 @RequestParam(name = "deliveryComment", required = false) String info,
                                 @RequestParam(name = "deliveryBuyerName", required = true) String buyerName,
                                 Model model) {

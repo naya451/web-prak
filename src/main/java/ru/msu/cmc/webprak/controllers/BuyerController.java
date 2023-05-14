@@ -75,11 +75,13 @@ public class BuyerController {
                                 @RequestParam(name = "buyerAddress", required = false) String address,
                                 @RequestParam(name = "buyerDescription", required = false) String info,
                                 Model model) {
-        Buyers buyer = buyersDAO.getById(buyerId);
         List<Buyers> buyers = buyersDAO.getAllBuyers();
         boolean changeIsSuccessful = false;
-
-        if (buyer != null) {
+        Buyers buyer = null;
+        if (buyerId != 0) {
+            buyer = buyersDAO.getById(buyerId);
+        }
+        if (buyerId != 0 && buyer != null) {
             buyer.setName(name);
             if (phone!= null) {
                 buyer.setPhone(phone);
@@ -95,7 +97,20 @@ public class BuyerController {
             }
             buyersDAO.update(buyer);
         } else {
-            buyer = new Buyers(buyerId, name, phone, email, address, info);
+            buyer = new Buyers();
+            buyer.setName(name);
+            if (phone!= null) {
+                buyer.setPhone(phone);
+            }
+            if (email!= null) {
+                buyer.setEmail(email);
+            }
+            if (address!= null) {
+                buyer.setAddress(address);
+            }
+            if (info!= null) {
+                buyer.setDescription(info);
+            }
             buyersDAO.save(buyer);
         }
         return "index";

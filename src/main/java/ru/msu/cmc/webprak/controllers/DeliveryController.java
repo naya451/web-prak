@@ -111,7 +111,7 @@ public class DeliveryController {
     @GetMapping("/searchDelivery")
     public String searchEmployee(@RequestParam(name = "date1", required = true) @DateTimeFormat(pattern = "yyyy-MM-dd") Date date1,
                                  @RequestParam(name = "date2", required = true) @DateTimeFormat(pattern = "yyyy-MM-dd") Date date2,
-                                 @RequestParam(name = "sorting", required = false) String sortingId,
+                                 @RequestParam(name = "sortingId", required = false) String sortingId,
                                  @RequestParam(name = "asc", required = false) String asc,
                                  Model model) {
 

@@ -78,11 +78,12 @@ public class GoodController {
                                @RequestParam(name = "goodMeasurement", required = false) String measurement,
                                @RequestParam(name = "goodDescription", required = false) String info,
                                Model model) {
-        Goods good = goodsDAO.getById(goodId);
         List<Goods> goods = goodsDAO.getAllGoods();
-        boolean changeIsSuccessful = false;
-
-        if (good != null) {
+        Goods good = null;
+        if (goodId != 0) {
+            good = goodsDAO.getById(goodId);
+        }
+        if (goodId != 0 && good != null) {
             good.setName(name);
             if (type!= null) {
                 good.setType(type);
@@ -107,7 +108,29 @@ public class GoodController {
             }
             goodsDAO.update(good);
         } else {
-            good = new Goods(goodId, name, type, size1, size2, size3, time, info, measurement);
+            good = new Goods();
+            good.setName(name);
+            if (type!= null) {
+                good.setType(type);
+            }
+            if (size1!= null) {
+                good.setSize1(size1);
+            }
+            if (size2!= null) {
+                good.setSize2(size2);
+            }
+            if (size3!= null) {
+                good.setSize3(size3);
+            }
+            if (time!= null) {
+                good.setTime_of_keeping(time);
+            }
+            if (measurement!= null) {
+                good.setMeasurement(measurement);
+            }
+            if (info!= null) {
+                good.setDescription(info);
+            }
             goodsDAO.save(good);
         }
         return "index";
